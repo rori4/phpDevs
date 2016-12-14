@@ -19,6 +19,7 @@
                 <a href="<?=APP_ROOT?>/posts/edit/<?=htmlspecialchars($post['id'])?>">[Edit]</a>
                 <a href="<?=APP_ROOT?>/posts/delete/<?=htmlspecialchars($post['id'])?>">[Delete]</a>
             </td>
+            //ebalo si e maikata
         </tr>
     <?php endforeach   ?>
     </table>
