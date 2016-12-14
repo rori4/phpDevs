@@ -13,38 +13,38 @@ class UsersController extends BaseController
 
             if (strlen($username) <=1)
             {
-                $this->addErrorMessage("Username is invalid!");
-                return;
+                $this->setValidationError("username","Username is invalid!");
             }
 
             if (strlen($password) <=1)
             {
-                $this->addErrorMessage("Password is invalid!");
-                return;
+                $this->setValidationError("password","Password is invalid!");
             }
 
             if ($password != $password_confirm)
             {
-                $this->addErrorMessage("Passwords do not match!");
+                $this->setValidationError("password_confirm","Passwords do not match!");
                 return;
             }
 
             if (strlen($full_name) <= 1)
             {
-                $this->addErrorMessage("Invalid name!");
+                $this->setValidationError("full_name","Invalid name!");
                 return;
             }
 
-
-            $userId = $this->model->register($username,$password,$full_name);
-            if ($userId){
-                $_SESSION['username'] = $username;
-                $_SESSION['user_id'] = $userId;
-                $this->addInfoMessage("Registration successful.");
-                $this->redirect("");
-            } else {
-                $this->addErrorMessage("Error: registration failed");
+            if ($this->formValid()){
+                $userId = $this->model->register($username,$password,$full_name);
+                if ($userId){
+                    $_SESSION['username'] = $username;
+                    $_SESSION['user_id'] = $userId;
+                    $this->addInfoMessage("Registration successful.");
+                    $this->redirect("");
+                } else {
+                    $this->addErrorMessage("Error: registration failed");
+                }
             }
+
         }
     }
 
