@@ -1,6 +1,6 @@
 <?php
 
-class HomeModel extends BaseModel
+class PostsModel extends HomeModel
 {
     function getAll()
     {
@@ -10,4 +10,13 @@ class HomeModel extends BaseModel
             "ORDER BY date DESC");
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
+
+     public function create(string $title, string $content, int $user_id) : bool
+     {
+         $statement = self::$db->prepare(
+             "INSERT INTO posts (title, content, user_id) VALUES (?,?,?)");
+         $statement->bind_param("ssi", $title, $content, $user_id);
+         $statement->execute();
+         return $statement->affected_rows == 1;
+     }
 }
