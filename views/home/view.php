@@ -1,5 +1,13 @@
-<?php $this->title = "Post Title" ?>
+<?php $this->title = $this->post['title']?>
 
 <h1><?=htmlspecialchars($this->title)?></h1>
 
-<!-- TODO: display a single post here -->
+<main>
+    <p>
+        <i>Posted on</i>
+        <?=htmlspecialchars($this->post['date'])?>
+        <i>by</i>
+        <?=htmlspecialchars($this->post['full_name'])?>
+    </p>
+    <p><?=$this->post['content']?></p>
+</main>
