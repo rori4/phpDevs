@@ -2,4 +2,8 @@
 
 <h1><?= htmlspecialchars($this->title) ?></h1>
 
-<!-- TODO: login form will come here ... -->
+<form method="post">
+    <div>Username: <input type="text" name="username" /></div>
+    <div>Password: <input type="text" name="password" /></div>
+    <div><input type="submit" value="Login"></div>
+</form>
