@@ -49,7 +49,7 @@ class PostsController extends BaseController
             if ($this->model->delete($id)){
                 $this->addInfoMessage("Post deleted.");
             } else {
-                $this->addInfoMessage("Error: cannot delete post.");
+                $this->addErrorMessage("Error: cannot delete post.");
             }
             $this->redirect('posts');
         } else {
@@ -62,5 +62,46 @@ class PostsController extends BaseController
             }
             $this->post = $post;
         }
+    }
+
+    function edit(int $id){
+        if ($this->isPost){
+            //HTTP POST
+            $title = $_POST['post_title'];
+            if (strlen($title) < 1){
+                $this->setValidationError("post_title","Title cannot be empty!");
+            }
+            $content = $_POST['post_content'];
+            if (strlen($content) < 1){
+                $this->setValidationError("content", "Content cannot be empty!");
+            }
+            $date=$_POST['post_date'];
+            $dateRegex = '/^\d{2,4}-\d{1,2}-\d{1,2}( \d{1,2}:\d{1,2}(:\d{1,2})?)?$/';
+            if (! preg_match($dateRegex,$date)){
+                $this->setValidationError("post_date","Invalid date!");
+            }
+            $user_id = $_POST['user_id'];
+            if ($user_id <= 0 || $user_id > 1000000){
+                $this->setValidationError("user_id","Invalid author user ID!");
+            }
+            if ($this->formValid()){
+                if ($this->model->edit($id,$title,$content,$date,$user_id)){
+                    $this->addInfoMessage("Post edited.");
+                } else {
+                    $this->addErrorMessage("Error: cannot edit post.");
+                }
+                $this->redirect('posts');
+            }
+
+        }
+        //HTTP GET
+        //Show "confirm delete form"
+        $post = $this->model->getPostById($id);
+        if (!$post){
+            $this->addErrorMessage("Error: post does not exist,");
+            $this->redirect('posts');
+        }
+        $this->post = $post;
+
     }
 }
