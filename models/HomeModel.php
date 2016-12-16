@@ -11,10 +11,10 @@ class HomeModel extends BaseModel
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
-    function getPostById(int $id)
+    public function getPostById(int $id)
     {
         $statement = self::$db->prepare(
-            "SELECT posts.id, title, content, date, full_name, user_id " .
+            "SELECT posts.id, title, content, date, full_name " .
             "FROM posts LEFT JOIN users ON posts.user_id = users.id " .
             "WHERE posts.id = ?");
         $statement->bind_param("i",$id);

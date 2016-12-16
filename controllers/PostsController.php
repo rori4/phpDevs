@@ -9,7 +9,8 @@ class PostsController extends BaseController
 
     function index()
     {
-        $this -> posts = $this->model->getAll();
+        $userId = $_SESSION['user_id'];
+        $this->posts = $this->model->showUserPosts($userId);
     }
 
     function create()

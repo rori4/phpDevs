@@ -34,9 +34,21 @@ class PostsModel extends HomeModel
         $statement = self::$db->prepare(
             "UPDATE posts SET title = ?, " .
             "content = ?, date = ?, user_id = ? WHERE id = ?");
-        $statement->bind_param("sssii",
-            $title, $content, $date, $user_id, $id);
+        $statement->bind_param("sssii", $title, $content, $date, $user_id, $id);
         $statement->execute();
         return $statement->affected_rows >= 0;
+    }
+// Attempt to get User Posts for certain user
+//--------------------------------------------------------------
+    public function showUserPosts(int $id)
+    {
+        $statement = self::$db->prepare(
+            "SELECT posts.id, title, content, date, full_name, user_id
+            FROM posts LEFT JOIN users ON posts.user_id = users.id
+            WHERE posts.user_id = ?");
+        $statement->bind_param("i",$id);
+        $statement->execute();
+        $result[] = $statement->get_result()->fetch_array();
+        return $result;
     }
 }
