@@ -12,9 +12,17 @@ class PostsController extends BaseController
         $userId = $_SESSION['user_id'];
         $userRole = $_SESSION['user_role'];
         echo $userRole;
-        if ($userRole == 'admin') {
+        if ($userRole == 'admin')
+        {
             $this->posts = $this->model->getAll();
-        } else {
+        }
+        else if (empty($this->model->showUserPosts($userId)))
+        {
+            $this->posts = $this->addInfoMessage("You don't have any posts yet!");
+            $this->posts = $this->model->showUserPosts($userId);
+        }
+        else
+        {
             $this->posts = $this->model->showUserPosts($userId);
         }
     }

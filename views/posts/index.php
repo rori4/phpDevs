@@ -1,5 +1,6 @@
 <main>
     <table>
+        <?php if (!empty($this->posts)) : ?>
         <tr>
             <th>ID</th>
             <th>Title</th>
@@ -8,6 +9,9 @@
             <th>Author</th>
             <th>Actions</th>
         </tr>
+        <?php else: ?>
+        <div><a href="<?=APP_ROOT?>/posts/create">[Create Your First Post]</a></div>
+        <?php endif; ?>
     <?php foreach ($this->posts as $post): ?>
         <tr>
             <td><?=htmlspecialchars($post['id'])?></td>
