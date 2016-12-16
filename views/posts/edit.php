@@ -5,7 +5,7 @@
     <div>Title:</div>
     <input type="text" name="post_title" value="<?=htmlspecialchars($this->post['title'])?>" />
     <div>Content:</div>
-    <textarea id="textarea" name="post_content" rows="10"><?=htmlspecialchars($this->post['content'])?></textarea>
+    <textarea name="post_content" rows="10"><?=htmlspecialchars($this->post['content'])?></textarea>
     <div>Date (yyyy-MM-dd hh:mm:ss):</div>
     <input type="text" name="post_date" value="<?=htmlspecialchars($this->post['date'])?>" />
 
