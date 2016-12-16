@@ -80,6 +80,7 @@ class PostsController extends BaseController
     }
 
     function edit(int $id){
+        $this->authors = $this->model->allAuthors();
         if ($this->isPost){
             //HTTP POST
             $title = $_POST['post_title'];
@@ -95,7 +96,8 @@ class PostsController extends BaseController
             if (! preg_match($dateRegex,$date)){
                 $this->setValidationError("post_date","Invalid date!");
             }
-            $user_id = $_POST['user_id'];
+            $user_id = $_POST['post_author'];
+            echo $user_id;
             if ($user_id <= 0 || $user_id > 1000000){
                 $this->setValidationError("user_id","Invalid author user ID!");
             }

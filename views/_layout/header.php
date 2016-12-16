@@ -3,7 +3,12 @@
 
 <head>
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles.css" />
-
+    <script src='https://cdn.tinymce.com/4/tinymce.min.js'></script>
+    <script>
+        tinymce.init({
+            selector: "textarea"
+        });
+    </script>
     <link rel="icon" href="<?=APP_ROOT?>/content/images/favicon.ico" />
     <script src="<?=APP_ROOT?>/content/scripts/jquery-3.0.0.min.js"></script>
     <script src="<?=APP_ROOT?>/content/scripts/blog-scripts.js"></script>
