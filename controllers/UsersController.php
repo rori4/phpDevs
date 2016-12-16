@@ -16,6 +16,7 @@ class UsersController extends BaseController
             $password = $_POST['password'];
             $password_confirm = $_POST['password_confirm'];
             $full_name = $_POST['full_name'];
+            $user_role = $_POST['user_role'];
 
             if (strlen($username) <=1)
             {
@@ -40,10 +41,12 @@ class UsersController extends BaseController
             }
 
             if ($this->formValid()){
-                $userId = $this->model->register($username,$password,$full_name);
+                $userId = $this->model->register($username,$password,$full_name, $user_role);
+                $userRole = $this->model->checkUserRole($username,$password);
                 if ($userId){
                     $_SESSION['username'] = $username;
                     $_SESSION['user_id'] = $userId;
+                    $_SESSION['user_role'] = $userRole;
                     $this->addInfoMessage("Registration successful.");
                     $this->redirect("");
                 } else {
@@ -61,9 +64,11 @@ class UsersController extends BaseController
             $username = $_POST['username'];
             $password = $_POST['password'];
             $userId = $this->model->login($username,$password);
+            $userRole = $this->model->checkUserRole($username,$password);
             if ($userId != false){
                 $_SESSION['username'] = $username;
                 $_SESSION['user_id'] = $userId;
+                $_SESSION['user_role'] = $userRole;
                 $this->addInfoMessage("Login successful.");
                 $this->redirect("");
             } else {

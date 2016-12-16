@@ -6,7 +6,11 @@
     <div>Password: <input type="password" name="password" required/></div>
     <div>Password Confim: <input type="password" name="password_confirm" required/></div>
     <div>Full Name: <input type="text" name="full_name" required/></div>
+    <div>Role:
+        <select name="user_role">
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+        </select>
+    </div>
     <div><input type="submit" value="Register"></div>
 </form>
-
-<!-- TODO: register form will come here ... -->

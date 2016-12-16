@@ -10,7 +10,13 @@ class PostsController extends BaseController
     function index()
     {
         $userId = $_SESSION['user_id'];
-        $this->posts = $this->model->showUserPosts($userId);
+        $userRole = $_SESSION['user_role'];
+        echo $userRole;
+        if ($userRole == 'admin') {
+            $this->posts = $this->model->getAll();
+        } else {
+            $this->posts = $this->model->showUserPosts($userId);
+        }
     }
 
     function create()

@@ -2,12 +2,12 @@
 
 class UsersModel extends BaseModel
 {
-    public function register(string $username, string $password, string $full_name)
+    public function register(string $username, string $password, string $full_name, string $user_role)
     {
      $password_hash= password_hash($password,PASSWORD_DEFAULT);
      $statement = self::$db->prepare(
-         "INSERT INTO users(username, password_hash, full_name) VALUES(?,?,?)");
-     $statement->bind_param("sss", $username, $password_hash, $full_name);
+         "INSERT INTO users(username, password_hash, full_name, user_role) VALUES(?,?,?,?)");
+     $statement->bind_param("ssss", $username, $password_hash, $full_name,$user_role);
      $statement->execute();
      if ($statement->affected_rows != 1)
          return false;
@@ -23,6 +23,18 @@ class UsersModel extends BaseModel
         $result = $statement->get_result()->fetch_assoc();
         if (password_verify($password,$result['password_hash']))
             return $result['id'];
+        return false;
+    }
+
+    public function checkUserRole(string $username, string $password)
+    {
+        $statement = self::$db->prepare(
+            "SELECT id, password_hash,user_role FROM users WHERE username = ?");
+        $statement->bind_param("s",$username);
+        $statement->execute();
+        $result = $statement->get_result()->fetch_assoc();
+        if (password_verify($password,$result['password_hash']))
+            return $result['user_role'];
         return false;
     }
     public function getAll(): array

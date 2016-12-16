@@ -8,19 +8,8 @@
             <th>Author</th>
             <th>Actions</th>
         </tr>
-<!--        TODO: Find the bug and fix it : Illegal string offset-->
     <?php foreach ($this->posts as $post): ?>
         <tr>
-<!--        TODO: DEBUGGING-->
-            <?php if (is_array($post))
-            {
-                echo 'Array';
-            }
-            else
-            {
-                echo 'Not Array';
-            }?>
-
             <td><?=htmlspecialchars($post['id'])?></td>
             <td><?=htmlspecialchars($post['title'])?></td>
             <td><?=cutLongText($post['content'])?></td>

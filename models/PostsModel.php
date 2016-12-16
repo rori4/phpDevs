@@ -5,9 +5,9 @@ class PostsModel extends HomeModel
     function getAll()
     {
         $statement = self::$db->query(
-            "SELECT posts.id,title,content,date, full_name " .
-            "FROM posts JOIN users on posts.user_id = users.id " .
-            "ORDER BY date DESC");
+            "SELECT posts.id,title,content,date, full_name
+            FROM posts JOIN users on posts.user_id = users.id 
+            ORDER BY date DESC");
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
@@ -32,25 +32,20 @@ class PostsModel extends HomeModel
     public function edit(string $id, string $title, string $content, string $date, int $user_id) : bool
     {
         $statement = self::$db->prepare(
-            "UPDATE posts SET title = ?, " .
-            "content = ?, date = ?, user_id = ? WHERE id = ?");
+            "UPDATE posts SET title = ?, 
+            content = ?, date = ?, user_id = ? WHERE id = ?");
         $statement->bind_param("sssii", $title, $content, $date, $user_id, $id);
         $statement->execute();
         return $statement->affected_rows >= 0;
     }
 // Attempt to get User Posts for certain user
 //--------------------------------------------------------------
-    public function showUserPosts(int $id)
+    public function showUserPosts(int $id) :array
     {
-        $statement = self::$db->prepare(
+        $statement = self::$db->query(
             "SELECT posts.id, title, content, date, full_name, user_id
             FROM posts LEFT JOIN users ON posts.user_id = users.id
-            WHERE posts.user_id = ?");
-        $statement->bind_param("i",$id);
-        $statement->execute();
-        $result[] = $statement->get_result()->fetch_array();
-        // TODO: find out why it is printing only one row
-        // maybe it is because it needs to be a list of list or smth like a Dict
-        return $result;
+            WHERE user_id = " . $id);
+        return $statement->fetch_all(MYSQLI_ASSOC);
     }
 }
