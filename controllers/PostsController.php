@@ -43,6 +43,9 @@ class PostsController extends BaseController
             {
                 $this->setValidationError("post_content", "Content cannot be empty!");
             }
+            //---------------------------------
+            // TODO: upload an image
+            //---------------------------------
 
             if ($this->formValid())
             {
