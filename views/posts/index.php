@@ -11,6 +11,7 @@
 <!--        TODO: Find the bug and fix it : Illegal string offset-->
     <?php foreach ($this->posts as $post): ?>
         <tr>
+<!--        TODO: DEBUGGING-->
             <?php if (is_array($post))
             {
                 echo 'Array';
@@ -22,7 +23,7 @@
 
             <td><?=htmlspecialchars($post['id'])?></td>
             <td><?=htmlspecialchars($post['title'])?></td>
-            <td><?=htmlspecialchars($post['content'])?></td>
+            <td><?=cutLongText($post['content'])?></td>
             <td><?=htmlspecialchars($post['date'])?></td>
             <td><?=htmlspecialchars($post['full_name'])?></td>
             <td>

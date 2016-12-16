@@ -49,6 +49,8 @@ class PostsModel extends HomeModel
         $statement->bind_param("i",$id);
         $statement->execute();
         $result[] = $statement->get_result()->fetch_array();
+        // TODO: find out why it is printing only one row
+        // maybe it is because it needs to be a list of list or smth like a Dict
         return $result;
     }
 }
