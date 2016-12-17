@@ -1,9 +1,12 @@
 
 <footer class="container-fluid">
         <div class="container-fluid">
-            <div class="navbar-footer">
-      <?=htmlspecialchars(" (c)<?phpDevs>")?>
-            </div>
+                <div class="navbar-footer">
+                    <font
+                        size="5"
+                        face="VT323"
+                        color="orange"><?=htmlspecialchars("<?php")?><font color="#9370db">Devs</font>></font>
+                </div>
 
         </div>
 
