@@ -21,25 +21,63 @@
 </head>
 
 <body>
+<!--<header>-->
+<!--    <a href="--><?//=APP_ROOT?><!--"><img src="--><?//=APP_ROOT?><!--/content/images/phpDevs_logo_transparent.png"></a>-->
+<!--    <a href="--><?//=APP_ROOT?><!--/">Home</a>-->
+<!--    --><?php //if ($this->isLoggedIn) : ?>
+<!--        <a href="--><?//=APP_ROOT?><!--/posts">Posts</a>-->
+<!--        <a href="--><?//=APP_ROOT?><!--/posts/create">Create Post</a>-->
+<!--        <a href="--><?//=APP_ROOT?><!--/users">Users</a>-->
+<!--    --><?php //else: ?>
+<!--        <a href="--><?//=APP_ROOT?><!--/users/login">Login</a>-->
+<!--        <a href="--><?//=APP_ROOT?><!--/users/register">Register</a>-->
+<!--    --><?php //endif; ?>
+<!--    --><?php //if ($this->isLoggedIn) : ?>
+<!--        <div id="logged-in-info">-->
+<!--            <span>Hello, <b>--><?//=htmlspecialchars($_SESSION['username'])?><!--</b></span>-->
+<!--            <form method="post" action="--><?//=APP_ROOT?><!--/users/logout">-->
+<!--                <input type="submit" value="Logout"/>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    --><?php //endif; ?>
+<!--</header>-->
+
+<?php require_once('show-notify-messages.php'); ?>
 <header>
-    <a href="<?=APP_ROOT?>"><img src="<?=APP_ROOT?>/content/images/phpDevs_logo_transparent.png"></a>
-    <a href="<?=APP_ROOT?>/">Home</a>
-    <?php if ($this->isLoggedIn) : ?>
-        <a href="<?=APP_ROOT?>/posts">Posts</a>
-        <a href="<?=APP_ROOT?>/posts/create">Create Post</a>
-        <a href="<?=APP_ROOT?>/users">Users</a>
-    <?php else: ?>
-        <a href="<?=APP_ROOT?>/users/login">Login</a>
-        <a href="<?=APP_ROOT?>/users/register">Register</a>
-    <?php endif; ?>
-    <?php if ($this->isLoggedIn) : ?>
-        <div id="logged-in-info">
-            <span>Hello, <b><?=htmlspecialchars($_SESSION['username'])?></b></span>
-            <form method="post" action="<?=APP_ROOT?>/users/logout">
-                <input type="submit" value="Logout"/>
-            </form>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="<?=APP_ROOT?>"><?=htmlspecialchars("<?phpDevs>")?></a>
         </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <?php if ($this->isLoggedIn) : ?>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href=" href="<?=APP_ROOT?>/posts"> Posts<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?=APP_ROOT?>/posts">Beer</a></li>
+                    <li><a href="<?=APP_ROOT?>/posts">Pussy</a></li>
+                </ul>
+            </li>
+            <li><a href="<?=APP_ROOT?>/posts/create">Create Post</a></li>
+            <li><a href="<?=APP_ROOT?>/users">Users</a></li>
+        </ul>
+
+    <?php else: ?>
+    <li><a href="<?=APP_ROOT?>/users/login">Login</a></li>
+        <li><a href="<?=APP_ROOT?>/users/register">Register</a></li>
+    </div>
     <?php endif; ?>
+    <?php if ($this->isLoggedIn) : ?>
+    <div id="logged-in-info">
+        <span>Hello, <b><?=htmlspecialchars($_SESSION['username'])?></b></span>
+        <form method="post" action="<?=APP_ROOT?>/users/logout">
+            <input type="submit" value="Logout"/>
+        </form>
+    </div>
+</nav>
+    <?php endif; ?>
+
 </header>
 
 <?php require_once('show-notify-messages.php'); ?>
+
