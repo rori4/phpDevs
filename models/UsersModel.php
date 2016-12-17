@@ -1,6 +1,6 @@
 <?php
 
-class UsersModel extends BaseModel
+class UsersModel extends HomeModel
 {
     public function register(string $username, string $password, string $full_name, string $user_role)
     {
@@ -42,5 +42,24 @@ class UsersModel extends BaseModel
         $statement = self::$db->query(
             "SELECT * FROM users ORDER BY username");
         return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function delete(int $id) : bool
+    {
+        $statement = self::$db->prepare(
+            "DELETE FROM users WHERE id = ?");
+        $statement->bind_param("i", $id);
+        $statement->execute();
+        return $statement->affected_rows == 1;
+    }
+
+    public function edit(string $username, string $full_name, string $user_role, int $id ) : bool
+    {
+        $statement = self::$db->prepare(
+            "UPDATE users SET username = ?, 
+            full_name = ?, user_role = ? WHERE id = ?");
+        $statement->bind_param("sssi", $username, $full_name, $user_role, $id);
+        $statement->execute();
+        return $statement->affected_rows >= 0;
     }
 }

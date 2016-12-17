@@ -24,6 +24,7 @@
 
 <main>
     <?php foreach ($this->posts as $post): ?>
+
             <h1><?=htmlspecialchars($post['title'])?></h1>
             <p>
                 <i>Posted on</i>
@@ -32,5 +33,5 @@
                 <?=htmlspecialchars($post['full_name'])?>
             </p>
             <p><?=$post['content']?></p>
-        <?php endforeach   ?>
+    <?php endforeach   ?>
 </main>

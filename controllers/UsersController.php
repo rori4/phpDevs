@@ -82,4 +82,62 @@ class UsersController extends BaseController
 		session_destroy();
 		$this->redirect("");
     }
+
+    function delete(int $id){
+        if ($this->isPost){
+            //HTTP POST
+            //Delete the requested post by id and show info
+            if ($this->model->delete($id)){
+                $this->addInfoMessage("User deleted.");
+            } else {
+                $this->addErrorMessage("Error: cannot delete user.");
+            }
+            $this->redirect('users');
+        } else {
+            //HTTP GET
+            //Show "confirm delete form"
+            $user = $this->model->getUserById($id);
+            if (!$user){
+                $this->addErrorMessage("Error: user does not exist,");
+                $this->redirect('user');
+            }
+            $this->user = $user;
+        }
+    }
+
+    function edit(int $id){
+        $this->isAdmin();
+        if ($this->isPost){
+            //HTTP POST
+            //Edit the requested user by id and show info
+            $username = $_POST['username'];
+            if (strlen($username) < 1){
+                $this->setValidationError("username","Username cannot be empty!");
+            }
+            $full_name = $_POST['full_name'];
+            if (strlen($full_name) < 1){
+                $this->setValidationError("full_name","Username cannot be empty!");
+            }
+            $user_role = $_POST['user_role'];
+            $user_id = $_POST['user_id'];
+            if ($this->formValid()){
+                if ($this->model->edit($username,$full_name,$user_role, $user_id)){
+                    $this->addInfoMessage("User edited.");
+                } else {
+                    $this->addErrorMessage("Error: cannot edit user.");
+                }
+                $this->redirect('users');
+            }
+        }
+        //HTTP GET
+        //Show "confirm delete form"
+        $user = $this->model->getUserById($id);
+        if (!$user){
+            $this->addErrorMessage("Error: user does not exist,");
+            $this->redirect('user');
+        }
+        $this->user = $user;
+
+    }
+
 }

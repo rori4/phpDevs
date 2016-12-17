@@ -22,4 +22,14 @@ class HomeModel extends BaseModel
         $result = $statement->get_result()->fetch_assoc();
         return $result;
     }
+
+    public function getUserById(int $id)
+    {
+        $statement = self::$db->prepare(
+            "SELECT * FROM users WHERE id = ?");
+        $statement->bind_param("i",$id);
+        $statement->execute();
+        $result = $statement->get_result()->fetch_assoc();
+        return $result;
+    }
 }
