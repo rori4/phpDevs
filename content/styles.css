@@ -19,20 +19,14 @@ body>header>a>img, body>header a  {
 body>footer {
     background: #222;
     padding: 5px;
-    margin:  0;
+    margin-top:  10px;
+    margin-bottom: 0;
     text-align: center;
 
 }
 body>footer>div{
 color: #eee;
 }
-
-
-/*table th, table td {*/
-    /*background: #DDD;*/
-    /*padding: 5px;*/
-
-/*}*/
 
 ul#messages li {
     display: block;
