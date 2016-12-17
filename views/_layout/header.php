@@ -21,8 +21,6 @@
 </head>
 
 <body>
-
-<?php require_once('show-notify-messages.php'); ?>
 <header>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
