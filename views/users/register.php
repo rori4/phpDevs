@@ -3,6 +3,10 @@
 <h1><?= htmlspecialchars($this->title) ?></h1>
 
 
+
+
+
+
 <form method="post" class="form-inline">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -11,8 +15,7 @@
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
         <input type="text" name="full_name" class="form-control" placeholder="Enter FullName">
-    </div>
-    <br>
+    </div><br>
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
         <input type="password" name="password" class="form-control"  placeholder="Password">
@@ -21,11 +24,13 @@
         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
         <input type="password" name="password_confirm" class="form-control"  placeholder="Confirm Password">
     </div>
-    <div class="input-group"><button style="align-content: center" type="submit" class="btn btn-default" value="Register">Register</button>
-        <select class="form-control" name="user_role">
+    <div class="select">
+        <label for="userRole">Select Role</label>
+        <select class="form-control" name="user_role" >
             <option value="admin">Admin</option>
             <option value="user">User</option>
         </select>
+            <button style="align-content: center" type="submit" class="btn btn-primary" value="Register">Register</button>
     </div>
 
 </form>
