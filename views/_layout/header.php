@@ -38,9 +38,15 @@
                     <li><a href="<?=APP_ROOT?>/posts">Weed</a></li>
                 </ul>
             </li>
-            <li><a href="<?=APP_ROOT?>/posts">Posts</a></li>
+            <?php if ($_SESSION['user_role']=="admin"):?>
+                <li><a href="<?=APP_ROOT?>/posts">All Posts</a></li>
+            <?php else:?>
+                <li><a href="<?=APP_ROOT?>/posts">My Posts</a></li>
+            <?php endif; ?>
             <li><a href="<?=APP_ROOT?>/posts/create">Create Post</a></li>
+            <?php if ($_SESSION['user_role']=="admin"):?>
             <li><a href="<?=APP_ROOT?>/users">Users</a></li>
+            <?php endif; ?>
         </ul>
 
     <?php else: ?>

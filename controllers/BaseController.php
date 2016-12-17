@@ -7,6 +7,7 @@ abstract class BaseController
     protected $isViewRendered = false;
     protected $isPost = false;
     protected $isLoggedIn = false;
+    protected $isAdmin = false;
     protected $title = "";
     protected $model;
     protected $validationErrors = [];
@@ -21,6 +22,11 @@ abstract class BaseController
         }
 
         $this->isLoggedIn = isset($_SESSION['username']);
+
+        if (isset($_SESSION['user_role'])){
+            $this->isAdmin = ($_SESSION['user_role']=="admin");
+        }
+
 
         // Load the default model class for the current controller
         $modelClassName = ucfirst(strtolower($controllerName)) . 'Model';
@@ -86,6 +92,12 @@ abstract class BaseController
     public function authorize() {
         if (! $this->isLoggedIn) {
             $this->addErrorMessage("Please login first.");
+            $this->redirect("users", "login");
+        }
+    }
+    public function isAdmin() {
+        if (! $this->isAdmin) {
+            $this->addErrorMessage("Only for admins. GET OUT!");
             $this->redirect("users", "login");
         }
     }

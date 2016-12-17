@@ -71,15 +71,23 @@
       <Position>4</Position>
       <DataType>varchar(200)|0</DataType>
     </column>
-    <index id="22" parent="9" name="username_UNIQUE">
+    <column id="22" parent="9" name="user_role">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="23" parent="9" name="username_UNIQUE">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="23" parent="9" name="PRIMARY">
+    <index id="24" parent="9" name="user_role">
+      <ColNames>user_role</ColNames>
+    </index>
+    <key id="25" parent="9" name="PRIMARY">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="24" parent="9" name="username_UNIQUE">
+    <key id="26" parent="9" name="username_UNIQUE">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username_UNIQUE</UnderlyingIndexName>
     </key>

@@ -9,8 +9,6 @@
     <div>Date (yyyy-MM-dd hh:mm:ss):</div>
     <input type="text" name="post_date" value="<?=htmlspecialchars($this->post['date'])?>" />
 
-
-    <!-- //TODO: edit author id only if admin    -->
     <?php if ($_SESSION['user_role']=="admin"): ?>
         <div>Author:</div>
         <select name="post_author">
