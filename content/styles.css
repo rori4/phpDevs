@@ -14,11 +14,16 @@ body>header>a>img, body>header a  {
 }
 
 body>footer {
-    background: #eee;
+    background: #222;
     padding: 5px;
     margin: 10px 0;
     text-align: center;
+
 }
+body>footer>div{
+color: #eee;
+}
+
 
 table th, table td {
     background: #DDD;
@@ -82,6 +87,6 @@ body>main:after {
     display: block;
     clear: both;
 }
-footer>h2{
-   align-content: center;
+footer>h2 {
+    align-content: center;
 }

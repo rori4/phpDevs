@@ -1,6 +1,10 @@
 
     <footer>
+        <div class="container-fluid">
+            <div class="navbar-footer">
       <?=htmlspecialchars(" (c)<?phpDevs>")?>
+            </div>
+        </div>
     </footer>
 
 <!--    <h2>Why are we so cool?</h2>-->
