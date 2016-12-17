@@ -42,7 +42,6 @@
                     <li><a href="<?=APP_ROOT?>/posts/create">Create Post</a></li>
                     <li><a href="<?=APP_ROOT?>/users">Users</a></li>
                 </ul>
-
     <?php else: ?>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="<?=APP_ROOT?>/users/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
