@@ -46,16 +46,16 @@
                     <li><a href="<?=APP_ROOT?>/posts/create">Create Post</a></li>
                     <li><a href="<?=APP_ROOT?>/users">Users</a></li>
                 </ul>
-    <?php else: ?>
+                    <?php else: ?>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="<?=APP_ROOT?>/users/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-                    <li><a href="<?=APP_ROOT?>/users/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="<?=APP_ROOT?>/users/login"><span class="glyphicon glyphicon-log-in logo-small"></span><font color="orange">  Login</font></a></li>
+                    <li><a href="<?=APP_ROOT?>/users/register"><span class="glyphicon glyphicon-user logo-small"></span><font color="#9370db"> Sign up</font></font> </a></li>
                 </ul>
-    </div>
+            </div>
     <?php endif; ?>
     <?php if ($this->isLoggedIn) : ?>
     <div id="logged-in-info">
-        <li><a href="<?=APP_ROOT?>/users/logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+        <li><a href="<?=APP_ROOT?>/users/logout"><span class="glyphicon glyphicon-log-out logo-small"></span>Logout</a></li>
     </div>
 </nav>
     <?php endif; ?>
