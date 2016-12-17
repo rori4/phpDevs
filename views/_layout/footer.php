@@ -4,7 +4,11 @@
             <div class="navbar-footer">
       <?=htmlspecialchars(" (c)<?phpDevs>")?>
             </div>
+
         </div>
+
+
+
     </footer>
 
 <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">

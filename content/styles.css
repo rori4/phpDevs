@@ -94,6 +94,9 @@ body>main:after {
 footer>h2 {
     align-content: center;
 }
+footer>a{
+    float: right;
+}
 .logo-small {
     color: #f4511e;
     font-size: 20px;}

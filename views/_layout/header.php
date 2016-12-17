@@ -35,16 +35,16 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <?php if ($this->isLoggedIn) : ?>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#"> Categories<span class="caret"></span></a>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#"> <font color="orange">  Categories</font><span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?=APP_ROOT?>/posts">Pussy</a></li>
-                            <li><a href="<?=APP_ROOT?>/posts">Money</a></li>
-                            <li><a href="<?=APP_ROOT?>/posts">Weed</a></li>
+                            <li><a href="<?=APP_ROOT?>/posts"><font color="#9370db">  Pussy</font></a></li>
+                            <li><a href="<?=APP_ROOT?>/posts"><font color="#9370db">  Money</font></a></li>
+                            <li><a href="<?=APP_ROOT?>/posts"><font color="#9370db">  Weed</font></a></li>
                         </ul>
                     </li>
-                    <li><a href="<?=APP_ROOT?>/posts">Posts</a></li>
-                    <li><a href="<?=APP_ROOT?>/posts/create">Create Post</a></li>
-                    <li><a href="<?=APP_ROOT?>/users">Users</a></li>
+                    <li><a href="<?=APP_ROOT?>/posts"><font color="orange">  Posts</font></a></li>
+                    <li><a href="<?=APP_ROOT?>/posts/create"><font color="orange">  Create Post</font></a></li>
+                    <li><a href="<?=APP_ROOT?>/users"><font color="orange"> Users</font></a></li>
                 </ul>
                     <?php else: ?>
                 <ul class="nav navbar-nav navbar-right">
@@ -55,7 +55,7 @@
     <?php endif; ?>
     <?php if ($this->isLoggedIn) : ?>
     <div id="logged-in-info">
-        <li><a href="<?=APP_ROOT?>/users/logout"><span class="glyphicon glyphicon-log-out logo-small"></span>Logout</a></li>
+        <li><a href="<?=APP_ROOT?>/users/logout"><span class="glyphicon glyphicon-log-out logo-small"></span><font color="orange">  Logout</font></a></li>
     </div>
 </nav>
     <?php endif; ?>
