@@ -4,7 +4,9 @@
 <head>
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles.css" />
      <script src='https://cdn.tinymce.com/4/tinymce.min.js'></script>
-
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=VT323');
+    </style>
     <script>
         tinymce.init({
             selector: "textarea"
@@ -26,7 +28,10 @@
 <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="<?=APP_ROOT?>"><?=htmlspecialchars("<?phpDevs>")?></a>
+                    <a class="navbar-brand" href="<?=APP_ROOT?>"><font
+                        size="6"
+                        face="VT323"
+                        color="orange"><?=htmlspecialchars("<?php")?><font color="#9370db">Devs</font>></font> </a>
                 </div>
                 <ul class="nav navbar-nav">
                     <?php if ($this->isLoggedIn) : ?>
