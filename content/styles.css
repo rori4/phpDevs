@@ -28,11 +28,11 @@ color: #eee;
 }
 
 
-table th, table td {
-    background: #DDD;
-    padding: 5px;
+/*table th, table td {*/
+    /*background: #DDD;*/
+    /*padding: 5px;*/
 
-}
+/*}*/
 
 ul#messages li {
     display: block;
