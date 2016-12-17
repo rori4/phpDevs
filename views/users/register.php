@@ -21,13 +21,13 @@
         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
         <input type="password" name="password_confirm" class="form-control"  placeholder="Confirm Password">
     </div>
-    <div class="input-group">
+    <div class="input-group"><button style="align-content: center" type="submit" class="btn btn-default" value="Register">Register</button>
         <select class="form-control" name="user_role">
             <option value="admin">Admin</option>
             <option value="user">User</option>
         </select>
     </div>
-    <button style="align-content: center" type="submit" class="btn btn-default" value="Register">Register</button>
+
 </form>
 
 

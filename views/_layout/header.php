@@ -3,14 +3,14 @@
 
 <head>
     <link rel="stylesheet" href="<?=APP_ROOT?>/content/styles.css" />
-    <!-- Script for WYSIWYG   -->
-    <script src='https://cdn.tinymce.com/4/tinymce.min.js'></script>
+     <script src='https://cdn.tinymce.com/4/tinymce.min.js'></script>
+
     <script>
         tinymce.init({
             selector: "textarea"
         });
     </script>
-    <!--  Script for WYSIWYG ends here  -->
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -19,8 +19,6 @@
     <link rel="icon" href="<?=APP_ROOT?>/content/images/favicon.ico" />
     <script src="<?=APP_ROOT?>/content/scripts/jquery-3.0.0.min.js"></script>
     <script src="<?=APP_ROOT?>/content/scripts/blog-scripts.js"></script>
-
-    <!-- Script for calendar ends here   /-->
     <title><?php if (isset($this->title)) echo htmlspecialchars($this->title) ?></title>
 </head>
 
@@ -54,16 +52,10 @@
     <?php endif; ?>
     <?php if ($this->isLoggedIn) : ?>
     <div id="logged-in-info">
-        <span>Hello, <b><?=htmlspecialchars($_SESSION['username'])?></b></span>
-        <form method="post" action="<?=APP_ROOT?>/users/logout">
-            <input type="submit" value="Logout"/>
-        </form>
+        <li><a href="<?=APP_ROOT?>/users/logout"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
     </div>
 </nav>
     <?php endif; ?>
-
-
-
 </header>
 
 <?php require_once('show-notify-messages.php'); ?>

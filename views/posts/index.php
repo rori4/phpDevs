@@ -16,7 +16,8 @@
             <th>Actions</th>
         </tr>
         <?php else: ?>
-        <div><a href="<?=APP_ROOT?>/posts/create">[Create Your First Post]</a></div>
+        <div> <button type="submit" class="btn btn-default" value="create"><a href="<?=APP_ROOT?>/posts/create">Create new post</a></button></div>
+
         <?php endif; ?>
     <?php foreach ($this->posts as $post): ?>
         <tr>
