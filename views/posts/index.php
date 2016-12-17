@@ -1,3 +1,9 @@
+<header>
+
+</header>
+
+
+
 <main>
     <table>
         <?php if (!empty($this->posts)) : ?>

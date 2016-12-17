@@ -5,7 +5,7 @@ class HomeController extends BaseController
     function index()
     {
         $posts = $this->model->getLatestPosts(5);
-        $this->posts = array_slice($posts,0,3);
+        $this->posts = array_slice($posts,0,5);
         $this->postsSidebar = $posts;
     }
 	
