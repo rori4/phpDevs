@@ -110,7 +110,13 @@ div>button>a{
     margin: auto;
     padding: 10px;
 }
+aside{
 
+    float:left;
+    max-width:200px;
+    margrin: 0px;
+    padding: 1em;
+}
 .sidebar {
     background: #222;
 }

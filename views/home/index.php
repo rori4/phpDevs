@@ -1,9 +1,12 @@
 <?php $this->title = 'Welcome to My Blog'; ?>
+
 <div id="wrapper">
-    <aside class="sidebar">
-        <h2>Recent Posts</h2>
+    <aside class="sidebar" <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+        <h3><font color="#eee">Recent Posts</font></h3>
         <?php foreach ($this->postsSidebar as $post): ?>
-            <a href="<?=APP_ROOT?>/home/view/<?=$post['id']?>"><?=htmlspecialchars($post['title'])?></a><br>
+
+            <a href="<?=APP_ROOT?>/home/view/<?=$post['id']?>"><?=htmlspecialchars($post['title'])?></a></ul>
+            <br>
         <?php endforeach   ?>
     </aside>
 
