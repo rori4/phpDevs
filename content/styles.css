@@ -3,9 +3,9 @@ body>header {
     padding: 5px;
 }
 
-aside{
+aside>h2{
     float: left;
-    max-width: 160px;
+    max-width: 200px;
     margin: 0;
     padding: 1em;
 }
@@ -19,19 +19,13 @@ body>header>a>img, body>header a  {
 body>footer {
     background: #222;
     padding: 5px;
-    margin: 10px 0;
+    margin-top:  10px;
+    margin-bottom: 0;
     text-align: center;
 
 }
 body>footer>div{
 color: #eee;
-}
-
-
-table th, table td {
-    background: #DDD;
-    padding: 5px;
-
 }
 
 ul#messages li {
@@ -100,6 +94,16 @@ footer>a{
 .logo-small {
     color: #f4511e;
     font-size: 20px;}
+
+div>button>a:link{
+    text-decoration: none;
+}
+div>button>a:hover{
+    color:white;
+}
+div>button>a{
+    color: white;
+}
 
 .middle {
     width: 50%;

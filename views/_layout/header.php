@@ -28,7 +28,7 @@
 <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="<?=APP_ROOT?>"><font
+                    <a  class="navbar-brand" href="<?=APP_ROOT?>"><font
                         size="6"
                         face="VT323"
                         color="orange"><?=htmlspecialchars("<?php")?><font color="#9370db">Devs</font>></font> </a>
