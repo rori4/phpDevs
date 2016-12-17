@@ -3,9 +3,9 @@ body>header {
     padding: 5px;
 }
 
-aside{
+aside>h2{
     float: left;
-    max-width: 160px;
+    max-width: 200px;
     margin: 0;
     padding: 1em;
 }
@@ -98,3 +98,12 @@ footer>h2 {
 .logo-small {
     color: #f4511e;
     font-size: 20px;}
+div>button>a:link{
+    text-decoration: none;
+}
+div>button>a:hover{
+    color:white;
+}
+div>button>a{
+   color: white;
+}
