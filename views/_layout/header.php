@@ -28,7 +28,6 @@
                     <a class="navbar-brand" href="<?=APP_ROOT?>"><?=htmlspecialchars("<?phpDevs>")?></a>
                 </div>
                 <ul class="nav navbar-nav">
-<!--                    <li><a href="--><?//=APP_ROOT?><!--">Home</a></li>-->
                     <?php if ($this->isLoggedIn) : ?>
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#"> Categories<span class="caret"></span></a>
                         <ul class="dropdown-menu">

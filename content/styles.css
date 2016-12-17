@@ -28,7 +28,7 @@ color: #eee;
 table th, table td {
     background: #DDD;
     padding: 5px;
-    position: absolute;
+
 }
 
 ul#messages li {
