@@ -3,6 +3,9 @@ body>header {
     padding: 5px;
 }
 
+.container-fluid{
+
+}
 body>header>a>img, body>header a  {
     display: inline-block;
     vertical-align: middle;
@@ -78,4 +81,7 @@ body>main:after {
     content: '';
     display: block;
     clear: both;
+}
+footer>h2{
+   align-content: center;
 }
