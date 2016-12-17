@@ -7,13 +7,20 @@
         <th>ID</th>
         <th>Username</th>
         <th>Full Name</th>
+        <?php if ($_SESSION['user_role']=="admin"):?>
+            <th>Actions</th>
+        <?php endif; ?>
     </tr>
     <?php foreach ($this->users as $user) : ?>
         <tr>
             <td><?=$user['id']?></td>
             <td><?=htmlspecialchars($user['username']) ?></td>
             <td><?=htmlspecialchars($user['full_name']) ?></td>
-            <?php if ($_SESSION['user_role']=="adming"):?>
+            <?php if ($_SESSION['user_role']=="admin"):?>
+                <td>
+                    <a href="#">[Edit]</a>
+                    <a href="#">[Delete]</a>
+                </td>
             <?php endif; ?>
         </tr>
     <?php endforeach ?>

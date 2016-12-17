@@ -27,7 +27,11 @@
     <a href="<?=APP_ROOT?>"><img src="<?=APP_ROOT?>/content/images/site-logo.png"></a>
     <a href="<?=APP_ROOT?>/">Home</a>
     <?php if ($this->isLoggedIn) : ?>
-        <a href="<?=APP_ROOT?>/posts">Posts</a>
+        <?php if ($_SESSION['user_role']=="admin") : ?>
+            <a href="<?=APP_ROOT?>/posts">All Posts</a>
+        <?php else: ?>
+            <a href="<?=APP_ROOT?>/posts">My Posts</a>
+        <?php endif; ?>
         <a href="<?=APP_ROOT?>/posts/create">Create Post</a>
         <a href="<?=APP_ROOT?>/users">Users</a>
     <?php else: ?>
