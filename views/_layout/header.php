@@ -21,7 +21,7 @@
 
 <body>
 <header>
-    <a href="<?=APP_ROOT?>"><img src="<?=APP_ROOT?>/content/images/site-logo.png"></a>
+    <a href="<?=APP_ROOT?>"><img src="<?=APP_ROOT?>/content/images/phpDevs_logo_transparent.png"></a>
     <a href="<?=APP_ROOT?>/">Home</a>
     <?php if ($this->isLoggedIn) : ?>
         <a href="<?=APP_ROOT?>/posts">Posts</a>
