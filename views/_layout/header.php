@@ -19,10 +19,7 @@
     <link rel="icon" href="<?=APP_ROOT?>/content/images/favicon.ico" />
     <script src="<?=APP_ROOT?>/content/scripts/jquery-3.0.0.min.js"></script>
     <script src="<?=APP_ROOT?>/content/scripts/blog-scripts.js"></script>
-    <!--  Script for calendar  -->
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" media="screen"
-          href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+
     <!-- Script for calendar ends here   /-->
     <title><?php if (isset($this->title)) echo htmlspecialchars($this->title) ?></title>
 </head>
