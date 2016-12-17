@@ -23,29 +23,30 @@
 <body>
 <header>
 <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="<?=APP_ROOT?>"><?=htmlspecialchars("<?phpDevs>")?></a>
-        </div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <?php if ($this->isLoggedIn) : ?>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#"> Categories<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-
-                    <li><a href="<?=APP_ROOT?>/posts">Pussy</a></li>
-                    <li><a href="<?=APP_ROOT?>/posts">Money</a></li>
-                    <li><a href="<?=APP_ROOT?>/posts">Weed</a></li>
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="<?=APP_ROOT?>"><?=htmlspecialchars("<?phpDevs>")?></a>
+                </div>
+                <ul class="nav navbar-nav">
+<!--                    <li><a href="--><?//=APP_ROOT?><!--">Home</a></li>-->
+                    <?php if ($this->isLoggedIn) : ?>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"  href="#"> Categories<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?=APP_ROOT?>/posts">Pussy</a></li>
+                            <li><a href="<?=APP_ROOT?>/posts">Money</a></li>
+                            <li><a href="<?=APP_ROOT?>/posts">Weed</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="<?=APP_ROOT?>/posts">Posts</a></li>
+                    <li><a href="<?=APP_ROOT?>/posts/create">Create Post</a></li>
+                    <li><a href="<?=APP_ROOT?>/users">Users</a></li>
                 </ul>
-            </li>
-            <li><a href="<?=APP_ROOT?>/posts">Posts</a></li>
-            <li><a href="<?=APP_ROOT?>/posts/create">Create Post</a></li>
-            <li><a href="<?=APP_ROOT?>/users">Users</a></li>
-        </ul>
 
     <?php else: ?>
-    <li><a href="<?=APP_ROOT?>/users/login">Login</a></li>
-        <li><a href="<?=APP_ROOT?>/users/register">Register</a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="<?=APP_ROOT?>/users/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="<?=APP_ROOT?>/users/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                </ul>
     </div>
     <?php endif; ?>
     <?php if ($this->isLoggedIn) : ?>
