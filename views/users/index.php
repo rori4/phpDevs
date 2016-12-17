@@ -13,6 +13,8 @@
             <td><?=$user['id']?></td>
             <td><?=htmlspecialchars($user['username']) ?></td>
             <td><?=htmlspecialchars($user['full_name']) ?></td>
+            <?php if ($_SESSION['user_role']=="adming"):?>
+            <?php endif; ?>
         </tr>
     <?php endforeach ?>
 </table>
