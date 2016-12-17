@@ -32,12 +32,13 @@
             <?php if ($this->isLoggedIn) : ?>
             <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"> Categories<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="<?=APP_ROOT?>/posts">All Posts</a></li>
+
                     <li><a href="<?=APP_ROOT?>/posts">Pussy</a></li>
                     <li><a href="<?=APP_ROOT?>/posts">Money</a></li>
                     <li><a href="<?=APP_ROOT?>/posts">Weed</a></li>
                 </ul>
             </li>
+            <li><a href="<?=APP_ROOT?>/posts">Posts</a></li>
             <li><a href="<?=APP_ROOT?>/posts/create">Create Post</a></li>
             <li><a href="<?=APP_ROOT?>/users">Users</a></li>
         </ul>
