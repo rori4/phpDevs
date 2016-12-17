@@ -2,8 +2,15 @@
 
 <h1><?= htmlspecialchars($this->title) ?></h1>
 
-<form method="post">
-    <div>Username: <input type="text" name="username" /></div>
-    <div>Password: <input type="password" name="password" /></div>
-    <div><input type="submit" value="Login"></div>
+
+<form method="post" class="form-inline">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input type="text" name="username" class="form-control" placeholder="Enter username">
+    </div>
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <input type="password" name="password" class="form-control"  placeholder="Password">
+    </div>
+    <button type="submit" value="Login" class="btn btn-default">Login</button>
 </form>
