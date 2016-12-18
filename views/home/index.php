@@ -14,7 +14,6 @@
         <h1><?=htmlspecialchars($this->title)?></h1>
 
         <?php foreach ($this->posts as $post): ?>
-
             <h1><a href="<?=APP_ROOT?>/home/view/<?=$post['id']?>"><?=htmlspecialchars($post['title'])?></a></h1>
             <p>
                 <i>Posted on</i>

@@ -20,23 +20,23 @@ class UsersController extends BaseController
 
             if (strlen($username) <=1)
             {
-                $this->setValidationError("username","Username is invalid!");
+                $this->addErrorMessage("Username is invalid!");
             }
 
             if (strlen($password) <=1)
             {
-                $this->setValidationError("password","Password is invalid!");
+                $this->addErrorMessage("Password is invalid!");
             }
 
             if ($password != $password_confirm)
             {
-                $this->setValidationError("password_confirm","Passwords do not match!");
+                $this->addErrorMessage("Passwords do not match!");
                 return;
             }
 
             if (strlen($full_name) <= 1)
             {
-                $this->setValidationError("full_name","Invalid name!");
+                $this->addErrorMessage("Invalid name!");
                 return;
             }
 
