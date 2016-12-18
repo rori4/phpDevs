@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="c7503f35-583f-4a30-8113-2074990beeb1" name="Superhosting" url="http://phpdevs.tk">
-        <fileTransfer host="ftp.phpdevs.tk" port="21">
+        <fileTransfer host="ftp.phpdevs.tk" port="21" rootFolder="/public_html">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
