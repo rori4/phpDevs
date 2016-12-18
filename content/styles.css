@@ -1,3 +1,6 @@
+/****************************************/
+/**************** BODY*******************/
+/****************************************/
 body>header {
     background: #eee;
     padding: 5px;
@@ -27,41 +30,6 @@ body>footer {
 body>footer>div{
 color: #eee;
 }
-
-ul#messages li {
-    display: block;
-    width: 80%;
-    margin: 5px auto;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-ul#messages li.info {
-    background: #7f7;
-}
-
-ul#messages li.error {
-    background: #d00;
-    color: white;
-}
-
-.validation-error {
-    vertical-align: top;
-    margin-left: 10px;
-    color: red;
-}
-
-#logged-in-info {
-    float: right;
-    margin-top: 18px;
-}
-
-#logged-in-info form {
-    display: inline-block;
-    margin-right: 10px;
-}
-
 body>aside {
     float: right;
     width: 200px;
@@ -86,18 +54,33 @@ body>main:after {
     clear: both;
 }
 
-footer>h2 {
-    align-content: center;
-}
-footer>a{
-    float: right;
-}
-.logo-small {
-    color: #f4511e;
+/****************************************/
+/***************** LISTS*****************/
+/****************************************/
 
-    position: fixed;
-
+ul#messages li {
+    display: block;
+    width: 80%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
 }
+
+ul#messages li.info {
+    background: #7f7;
+}
+
+ul#messages li.error {
+    background: #d00;
+    color: white;
+}
+
+
+/****************************************/
+/*********** DIVS *********************/
+/****************************************/
+
 
 div>button>a:link{
     text-decoration: none;
@@ -114,69 +97,69 @@ div>button>a{
     padding: 1em;
     margin: -1em;
 }
-
-.middle {
-    width: 50%;
-    margin: auto;
-    padding: 10px;
-}
-.middle1 {
-    width: 32%;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-}
 aside{
-
+    margin-top: 200px;
     float:left;
     max-width:200px;
     margrin: 0px;
     padding: 1em;
 }
+
+/****************************************/
+/*********** CLASSES ********************/
+/****************************************/
+.middle {
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+.middle1 {
+
+    width: 32%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
 .sidebar {
     background: #222;
 }
-/*Added by rangel for the comments */
-textarea
-{
-    width:100%;
-    resize: vertical;
-}
-.textwrapper
-{
-    border:1px solid #999999;
-    margin:5px 0;
-    padding:3px;
-}
-/*End by rangel for the comments */
+.logo-small {
+    color: #f4511e;
 
-/*Added CSS for comments by rangel*/
-.thumbnail {
-    padding:0px;
+    position: fixed;
 }
-.panel {
-    position:relative;
+
+.validation-error {
+    vertical-align: top;
+    margin-left: 10px;
+    color: red;
 }
-.panel>.panel-heading:after,.panel>.panel-heading:before{
-    position:absolute;
-    top:11px;left:-16px;
-    right:100%;
-    width:0;
-    height:0;
-    display:block;
-    content:" ";
-    border-color:transparent;
-    border-style:solid solid outset;
-    pointer-events:none;
+
+#logged-in-info {
+    float: right;
+    margin-top: 18px;
 }
-.panel>.panel-heading:after{
-    border-width:7px;
-    border-right-color:#f7f7f7;
-    margin-top:1px;
-    margin-left:2px;
+
+#logged-in-info form {
+    display: inline-block;
+    margin-right: 10px;
 }
-.panel>.panel-heading:before{
-    border-right-color:#ddd;
-    border-width:8px;
+
+/****************************************/
+/************ FOOTER ********************/
+/****************************************/
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
 }
-/* End CSS from rangel*/
+footer>h2 {
+    align-content: center;
+}
+footer>a{
+    float: right;
+}
