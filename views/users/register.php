@@ -1,7 +1,7 @@
 <?php $this->title = 'Register New User'; ?>
-<div class="middle">
+<div class="middle1">
     <h1><?= htmlspecialchars($this->title) ?></h1>
-    <form method="post" class="form-inline">
+        <form method="post" class="form-inline">
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user logo-small"></i></span>
             <input type="text" name="username" class="form-control" placeholder="Enter UserName">
@@ -17,7 +17,7 @@
         <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-lock logo-small"></i></span>
             <input type="password" name="password_confirm" class="form-control"  placeholder="Confirm Password">
-        </div><br>
+        </div><br><br>
         <div class="select">
             <label for="userRole">Select Role</label>
             <select class="form-control" name="user_role" >

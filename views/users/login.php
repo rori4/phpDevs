@@ -1,8 +1,9 @@
+<div class="middle1">
 <?php $this->title = 'Login'; ?>
 
 <h1><?= htmlspecialchars($this->title) ?></h1>
 
-
+<br>
 <form method="post" class="form-inline">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user logo-small"></i></span>
@@ -14,3 +15,4 @@
     </div>
     <button type="submit" value="Login" class="btn btn-primary">Login</button>
 </form>
+</div>

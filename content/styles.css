@@ -94,7 +94,9 @@ footer>a{
 }
 .logo-small {
     color: #f4511e;
-    /*font-size: 20px; TODO: Review this CSS */
+
+    position: fixed;
+
 }
 
 div>button>a:link{
@@ -117,6 +119,12 @@ div>button>a{
     width: 50%;
     margin: auto;
     padding: 10px;
+}
+.middle1 {
+    width: 32%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
 }
 aside{
 
