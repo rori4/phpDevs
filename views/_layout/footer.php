@@ -1,20 +1,21 @@
 
 
 <footer class="container-fluid">
-        <div class="container-fluid">
-            <div class="navbar-footer">
-                <font
-                    size="5"
-                    face="VT323"
-                    color="orange"><?=htmlspecialchars("<?php")?><font color="#9370db">Devs</font>></font>
-            </div>
+
+
+    <div class="container-fluid">
+        <div class="navbar-footer">
+            <font
+                size="5"
+                face="VT323"
+                color="orange"><?=htmlspecialchars("<?php")?><font color="#9370db">Devs</font>></font>
         </div>
-</footer>
+    </div>
 
-<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox"">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox"">
         <div class="item active">
             <h4>"They drink a lot of beer"<br><span style="font-style:normal;">Vankata, bartender at bar Friday</span></h4>
         </div>
@@ -35,7 +36,12 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
     </a>
-</div>
+    </div>
+
+
+</footer>
+
+
 
     <?php require_once('fill-posted-fields.php'); ?>
 

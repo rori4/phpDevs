@@ -1,6 +1,10 @@
+
+
+<main>
+<form class="inline">
 <div class="middle">
 
-    <table class="table table-striped">
+    <table class="table table-hover">
         <thead>
         <?php if (!empty($this->posts)) : ?>
         <tr>
@@ -36,4 +40,6 @@
     </table>
 
 </div>
+
+</form>
 </main>

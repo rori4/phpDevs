@@ -21,6 +21,7 @@
     <script src="<?=APP_ROOT?>/content/scripts/jquery-3.0.0.min.js"></script>
     <script src="<?=APP_ROOT?>/content/scripts/blog-scripts.js"></script>
     <title><?php if (isset($this->title)) echo htmlspecialchars($this->title) ?></title>
+    <link rel="stylesheet" href="<?=APP_ROOT?>/content/shiban-footer-style.css" />
 </head>
 
 <body>
