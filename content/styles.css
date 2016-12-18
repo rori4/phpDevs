@@ -98,7 +98,7 @@ div>button>a{
     margin: -1em;
 }
 aside{
-    margin-top: 200px;
+
     float:left;
     max-width:200px;
     margrin: 0px;
@@ -113,6 +113,7 @@ aside{
     width: 50%;
     margin: auto;
     padding: 10px;
+    min-height: 100vh; !important;
 }
 .middle1 {
 
@@ -151,7 +152,7 @@ aside{
 /************ FOOTER ********************/
 /****************************************/
 footer {
-    position: fixed;
+
     right: 0;
     bottom: 0;
     left: 0;
@@ -216,3 +217,4 @@ textarea
 /****************************************/
 /********* END Comments CSS *************/
 /****************************************/
+
