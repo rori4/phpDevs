@@ -26,7 +26,7 @@
             <td>
                 <button type="submit" value="Edit" class="btn btn-primary"><a href="<?=APP_ROOT?>/users/edit/<?=htmlspecialchars($user['id'])?>"><font color="#eee">Edit</font></a></button>
                 <button type="submit" value="Delete" class="btn btn-primary"><a href="<?=APP_ROOT?>/users/delete/<?=htmlspecialchars($user['id'])?>"><font color="#eee">Delete</font></a></button>
-
+                //testing
             </td>
             <?php endif; ?>
         </tr>
