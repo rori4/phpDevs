@@ -1,3 +1,6 @@
+/****************************************/
+/**************** BODY*******************/
+/****************************************/
 body>header {
     background: #eee;
     padding: 5px;
@@ -27,41 +30,6 @@ body>footer {
 body>footer>div{
 color: #eee;
 }
-
-ul#messages li {
-    display: block;
-    width: 80%;
-    margin: 5px auto;
-    text-align: center;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-ul#messages li.info {
-    background: #7f7;
-}
-
-ul#messages li.error {
-    background: #d00;
-    color: white;
-}
-
-.validation-error {
-    vertical-align: top;
-    margin-left: 10px;
-    color: red;
-}
-
-#logged-in-info {
-    float: right;
-    margin-top: 18px;
-}
-
-#logged-in-info form {
-    display: inline-block;
-    margin-right: 10px;
-}
-
 body>aside {
     float: right;
     width: 200px;
@@ -85,19 +53,33 @@ body>main:after {
     display: block;
     clear: both;
 }
+/****************************************/
+/***************** LISTS*****************/
+/****************************************/
 
-footer>h2 {
-    align-content: center;
+ul#messages li {
+    display: block;
+    width: 80%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
 }
-footer>a{
-    float: right;
-}
-.logo-small {
-    color: #f4511e;
 
-    position: fixed;
-
+ul#messages li.info {
+    background: #7f7;
 }
+
+ul#messages li.error {
+    background: #d00;
+    color: white;
+}
+
+
+/****************************************/
+/*********** FOOTER *********************/
+/****************************************/
+
 
 div>button>a:link{
     text-decoration: none;
@@ -114,18 +96,6 @@ div>button>a{
     padding: 1em;
     margin: -1em;
 }
-
-.middle {
-    width: 50%;
-    margin: auto;
-    padding: 10px;
-}
-.middle1 {
-    width: 32%;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-}
 aside{
 
     float:left;
@@ -133,6 +103,55 @@ aside{
     margrin: 0px;
     padding: 1em;
 }
+
+/****************************************/
+/*********** CLASSES ********************/
+/****************************************/
+.middle {
+    background-color: #eee;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+.middle1 {
+
+    width: 32%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
 .sidebar {
     background: #222;
+}
+.logo-small {
+    color: #f4511e;
+
+    position: fixed;
+}
+
+.validation-error {
+    vertical-align: top;
+    margin-left: 10px;
+    color: red;
+}
+
+#logged-in-info {
+    float: right;
+    margin-top: 18px;
+}
+
+#logged-in-info form {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/****************************************/
+/************ FOOTER ********************/
+/****************************************/
+footer>h2 {
+    align-content: center;
+}
+footer>a{
+    float: right;
 }
