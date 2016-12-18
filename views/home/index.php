@@ -22,8 +22,10 @@
                 <?=htmlspecialchars($post['full_name'])?>
             </p>
             <p><?=$post['content']?></p>
+
         <?php endforeach   ?>
     </main>
+
 </div>
 
 <div class="middle1">

@@ -97,7 +97,7 @@ div>button>a{
     margin: -1em;
 }
 aside{
-
+    margin-top: 200px;
     float:left;
     max-width:200px;
     margrin: 0px;
@@ -108,7 +108,7 @@ aside{
 /*********** CLASSES ********************/
 /****************************************/
 .middle {
-    background-color: #eee;
+    background-color: white;
     width: 50%;
     margin: auto;
     padding: 10px;
