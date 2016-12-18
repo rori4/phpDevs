@@ -9,21 +9,21 @@
 
 <form method="post" class="form-inline">
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user logo-small"></i></span>
         <input type="text" name="username" class="form-control" placeholder="Enter UserName">
     </div>
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user logo-small"></i></span>
         <input type="text" name="full_name" class="form-control" placeholder="Enter FullName">
     </div><br>
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock logo-small"></i></span>
         <input type="password" name="password" class="form-control"  placeholder="Password">
     </div>
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock logo-small"></i></span>
         <input type="password" name="password_confirm" class="form-control"  placeholder="Confirm Password">
-    </div>
+    </div><br>
     <div class="select">
         <label for="userRole">Select Role</label>
         <select class="form-control" name="user_role" >
