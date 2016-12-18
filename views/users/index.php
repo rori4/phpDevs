@@ -13,7 +13,6 @@
             <?php endif; ?>
         </tr>
         </thead>
-
         <tbody>
         <?php foreach ($this->users as $user) : ?>
             <tr>
@@ -30,8 +29,6 @@
                 <?php endif; ?>
             </tr>
         <?php endforeach ?>
-
-
         </tbody>
     </table>
 </div>
