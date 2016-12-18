@@ -9,7 +9,7 @@
     </style>
     <script>
         tinymce.init({
-            selector: "textarea"
+            selector: "#text_editor"
         });
     </script>
     <meta charset="utf-8">

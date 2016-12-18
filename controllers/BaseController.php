@@ -62,6 +62,9 @@ abstract class BaseController
                 include('views/_layout/header.php');
             }
             echo $htmlFromView;
+
+            //TODO: add comments
+
             if ($includeLayout) {
                 include('views/_layout/footer.php');
             }

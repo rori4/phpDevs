@@ -37,6 +37,7 @@ class UsersModel extends HomeModel
             return $result['user_role'];
         return false;
     }
+
     public function getAll(): array
     {
         $statement = self::$db->query(
