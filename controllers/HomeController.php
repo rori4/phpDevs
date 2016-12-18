@@ -11,17 +11,14 @@ class HomeController extends BaseController
 	
 	function view($id)
     {
-        $post_id = $this->model->getPostById($id);
-        if (!$post_id)
+        $post = $this->model->getPostById($id);
+        if (!$post)
         {
             $this->addErrorMessage("Error: invalid post id");
             $this->redirect("");
         }
-        $this->post = $post_id;
+        $this->post = $post;
         //$this->nav = $this->model->getAllPosts();
-
-        $comments = $this->model->getPostComments($id);
-        $this->comments = $comments;
 
         if ($this->isPost) {
             $comment = $_POST['post_comment'];
@@ -30,20 +27,19 @@ class HomeController extends BaseController
                 $this->addErrorMessage("Comment cannot be empty!");
             }
 
-            //---------------------------------
-            // TODO: upload an image
-            //---------------------------------
-
             if ($this->formValid()) {
-                $userId = $_SESSION['user_id'];
-                if ($this->model->create($title, $content, $userId)) {
-                    $this->addInfoMessage("Post created.");
-                    $this->redirect("posts");
+                $user_id = $_SESSION['user_id'];
+                $post_id = $_POST['post_id'];
+                if ($this->model->addComment($comment, $user_id, $post_id)) {
+                    $this->addInfoMessage("Comment posted.");
                 } else {
-                    $this->addErrorMessage("Error: cannot create post.");
+                    $this->addErrorMessage("Error: cannot post comment.");
                 }
             }
         }
+        $post_id = $id;
+        $comment = $this->model->getPostComments($post_id);
+        $this->comment = $comment;
         // TODO: add comments function
     }
 }

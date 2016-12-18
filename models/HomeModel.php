@@ -35,19 +35,16 @@ class HomeModel extends BaseModel
 
     public function getPostComments(int $post_id)
     {
-        $statement = self::$db->prepare(
-            "SELECT * FROM comments WHERE post_id = ?");
-        $statement->bind_param("i",$post_id);
-        $statement->execute();
-        $result = $statement->get_result()->fetch_assoc();
-        return $result;
+        $statement = self::$db->query(
+            "SELECT comments.id,comments,date,user_id,post_id,username FROM comments JOIN users ON comments.user_id = users.id WHERE post_id = " . $post_id);
+        return $statement->fetch_all(MYSQLI_ASSOC);
     }
 //    TODO: here
-    public function create(string $title, string $content, int $user_id) : bool
+    public function addComment(string $comment, int $user_id, int $post_id) : bool
     {
         $statement = self::$db->prepare(
-            "INSERT INTO posts (title, content, user_id) VALUES (?,?,?)");
-        $statement->bind_param("ssi", $title, $content, $user_id);
+            "INSERT INTO comments (comments, user_id, post_id) VALUES (?,?,?)");
+        $statement->bind_param("sii", $comment, $user_id, $post_id);
         $statement->execute();
         return $statement->affected_rows == 1;
     }

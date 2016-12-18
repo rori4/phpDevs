@@ -43,9 +43,9 @@ class PostsModel extends HomeModel
     public function showUserPosts(int $id) :array
     {
         $statement = self::$db->query(
-            "SELECT posts.id, title, content, date, full_name, user_id
-            FROM posts LEFT JOIN users ON posts.user_id = users.id
-            WHERE user_id = " . $id);
+            "SELECT comments.id, comments, date, user_id, post_id, username
+            FROM comments JOIN users ON comments.user_id = users.id
+            WHERE post_id = " . $id);
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
