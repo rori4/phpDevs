@@ -18,6 +18,6 @@ class HomeController extends BaseController
             $this->redirect("");
         }
         $this->post = $post;
-        $this->nav = $this->model->getAllPosts();
+        //$this->nav = $this->model->getAllPosts();
     }
 }

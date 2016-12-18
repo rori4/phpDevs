@@ -1,7 +1,7 @@
 <?php $this->title = $this->post['title']?>
 
-<h1><?=htmlspecialchars($this->title)?></h1>
-<main>
+<main class="middle">
+    <h1><?=htmlspecialchars($this->title)?></h1>
     <p>
         <i>Posted on</i>
         <?=htmlspecialchars($this->post['date'])?>

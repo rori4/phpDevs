@@ -28,7 +28,7 @@
 
         <?php foreach ($this->posts as $post): ?>
 
-            <h1><?=htmlspecialchars($post['title'])?></h1>
+            <h1><a href="<?=APP_ROOT?>/home/view/<?=$post['id']?>"><?=htmlspecialchars($post['title'])?></a></h1>
             <p>
                 <i>Posted on</i>
                 <?=htmlspecialchars($post['date'])?>
