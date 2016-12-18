@@ -1,7 +1,7 @@
 <?php $this->title = 'Welcome to My Blog'; ?>
 
 <div id="wrapper">
-    <aside class="sidebar" <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="205">
+    <aside class="sidebar" <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="0">
         <h3><font color="#eee">Recent Posts</font></h3>
         <?php foreach ($this->postsSidebar as $post): ?>
 
