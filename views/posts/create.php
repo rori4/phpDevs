@@ -1,11 +1,13 @@
 <?php $this->title = 'Create New Post'; ?>
 <div class="middle">
     <h1><?=htmlspecialchars($this->title)?></h1>
-
+    <br>
     <form method="post">
-        <div>Title:</div>
-        <input type="text" name="post_title" />
-        <div>Content:</div>
+        <div class="form-group">
+            <label for="Title">Title: </label>
+        <input type="text" class="form-control" name="post_title" />
+        </div>
+       <br>
         <textarea id="text_editor" name="post_content" rows="10"></textarea>
         <div><br><br>
             <button type="submit" value="Create" class="btn btn-primary">Create</button>

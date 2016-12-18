@@ -3,7 +3,7 @@
 
 <h1><?= htmlspecialchars($this->title) ?></h1>
 
-<br>
+
 <form method="post" class="form-inline">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user logo-small"></i></span>
