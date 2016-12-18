@@ -1,3 +1,25 @@
+<div class="middle1">
+<!--ToDO: Pagination Function-->
+    <nav aria-label="Page navigation">
+    <ul class="pagination">
+        <li>
+            <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        <li><a href="<?=APP_ROOT?>/home/view/10">1</a></li>
+        <li><a href="<?=APP_ROOT?>/home/view/11">2</a></li>
+        <li><a href="<?=APP_ROOT?>/home/view/12">3</a></li>
+        <li><a href="<?=APP_ROOT?>/home/view/14">4</a></li>
+        <li><a href="<?=APP_ROOT?>/home/view/17">5</a></li>
+        <li>
+            <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+</div>
 
 <footer class="container-fluid">
         <div class="container-fluid">
@@ -7,15 +29,10 @@
                     face="VT323"
                     color="orange"><?=htmlspecialchars("<?php")?><font color="#9370db">Devs</font>></font>
             </div>
-
         </div>
-
-
-
-    </footer>
+</footer>
 
 <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox"">
@@ -40,8 +57,6 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-
-
 
     <?php require_once('fill-posted-fields.php'); ?>
 

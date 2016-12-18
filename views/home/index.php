@@ -1,4 +1,4 @@
-<?php $this->title = 'Welcome to My Blog'; ?>
+<?php $this->title = 'All posts'; ?>
 
 <div id="wrapper">
     <aside class="sidebar" <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="0">
@@ -11,7 +11,7 @@
     </aside>
 
     <main class="middle">
-        <h1><?=htmlspecialchars($this->title)?></h1>
+            <h1><?=htmlspecialchars($this->title)?></h1>
 
         <?php foreach ($this->posts as $post): ?>
             <h1><a href="<?=APP_ROOT?>/home/view/<?=$post['id']?>"><?=htmlspecialchars($post['title'])?></a></h1>
