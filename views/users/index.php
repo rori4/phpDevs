@@ -24,9 +24,10 @@
             <td><?=htmlspecialchars($user['full_name']) ?></td>
             <?php if ($_SESSION['user_role']=="admin"):?>
             <td>
-                <button type="submit" value="Edit" class="btn btn-primary"><a href="<?=APP_ROOT?>/users/edit/<?=htmlspecialchars($user['id'])?>"><font color="#eee">Edit</font></a></button>
-                <button type="submit" value="Delete" class="btn btn-primary"><a href="<?=APP_ROOT?>/users/delete/<?=htmlspecialchars($user['id'])?>"><font color="#eee">Delete</font></a></button>
-                //testing
+                <div>
+                <button type="button" class="btn btn-primary"><a href="<?=APP_ROOT?>/users/edit/<?=htmlspecialchars($user['id'])?>">Edit</a></button>
+                <button type="button" class="btn btn-primary"><a href="<?=APP_ROOT?>/users/delete/<?=htmlspecialchars($user['id'])?>">Delete</a></button>
+                </div>
             </td>
             <?php endif; ?>
         </tr>
