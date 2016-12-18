@@ -12,3 +12,9 @@
     filter: alpha(opacity=50);
     opacity: .5;
 }
+
+.table {
+    width: 0;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
