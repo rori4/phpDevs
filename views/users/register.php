@@ -1,5 +1,5 @@
 <?php $this->title = 'Register New User'; ?>
-<div class="middle1">
+<div class="register-index">
     <h1><?= htmlspecialchars($this->title) ?></h1>
         <form method="post" class="form-inline">
         <div class="input-group">

@@ -145,12 +145,14 @@ aside{
     margin: auto;
     padding: 10px;
     min-height: 80vh;
+    text-align: center;
 }
 .user-edit{
     width: 20%;
     margin: auto;
     padding: 10px;
     min-height: 80vh;
+    text-align: center;
 }
 .user-index{
     width: 30%;
@@ -163,6 +165,13 @@ aside{
     margin: auto;
     padding: 10px;
     min-height: 80vh;
+}
+.register-index{
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    min-height: 80vh;
+    text-align: center;
 }
 
 .sidebar {
@@ -194,6 +203,7 @@ aside{
     margin: auto;
     padding: 10px;
     min-height: 80vh;
+    text-align: center;
 }
 
 /****************************************/
