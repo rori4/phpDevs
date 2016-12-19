@@ -4,9 +4,30 @@ class HomeController extends BaseController
 {
     function index()
     {
-        $posts = $this->model->getLatestPosts(5);
-        $this->posts = array_slice($posts,0,5);
-        $this->postsSidebar = $posts;
+        $latestPosts = $this->model->getLatestPosts(5);
+        $this->postsSidebar = $latestPosts;
+
+        $allPosts = $this->model->getAll();
+
+//        echo print_r($this->Paginate($allPosts,5));
+//        echo print_r($this->fetchPaginationResults());
+        $this->pageNumbers = $this->Paginate($allPosts,5); // 5 posts per page
+        $this->resultPosts = $this->fetchPaginationResults();
+
+//        $data = array("Hey","Hello", "awesome");
+//        $numbers = $pag->Paginate($data,1);
+//
+//        $results = $pag->fetchResults();
+//
+//        foreach ($results as $r)
+//        {
+//            echo '<div>'.$r.'</div>';
+//        }
+//
+//        foreach ($numbers as $num)
+//        {
+//            echo  '<a href="Pagination.php?page='.$num.'">'.$num.'</a>';
+//        }
     }
 	
 	function view($id)

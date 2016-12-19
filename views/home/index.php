@@ -13,7 +13,7 @@
     <main class="middle">
             <h1><?=htmlspecialchars($this->title)?></h1>
 
-        <?php foreach ($this->posts as $post): ?>
+        <?php foreach ($this->resultPosts as $post): ?>
             <h1><a href="<?=APP_ROOT?>/home/view/<?=$post['id']?>"><?=htmlspecialchars($post['title'])?></a></h1>
             <p>
                 <i>Posted on</i>
@@ -29,7 +29,6 @@
 </div>
 
 <div class="middle1">
-    <!--ToDO: Pagination Function-->
     <nav aria-label="Page navigation">
         <ul class="pagination">
             <li class="disabled">
@@ -37,11 +36,9 @@
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
-            <li><a href="<?=APP_ROOT?>/home/view/10">1</a></li>
-            <li><a href="<?=APP_ROOT?>/home/view/11">2</a></li>
-            <li><a href="<?=APP_ROOT?>/home/view/12">3</a></li>
-            <li><a href="<?=APP_ROOT?>/home/view/14">4</a></li>
-            <li><a href="<?=APP_ROOT?>/home/view/17">5</a></li>
+            <?php foreach ($this->pageNumbers as $page) : ?>
+                <li><a href="<?=APP_ROOT?>/home/index/?page=<?=$page?>"><?=$page?></a></li>
+            <?php endforeach; ?>
             <li class="disabled">
                 <a href="#" aria-label="Next">
                     <span aria-hidden="true">&raquo;</span>
