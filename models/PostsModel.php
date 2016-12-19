@@ -40,12 +40,12 @@ class PostsModel extends HomeModel
     }
 // Attempt to get User Posts for certain user
 //--------------------------------------------------------------
-    public function showUserPosts(int $id) :array
+    public function showUserPosts(int $id)
     {
         $statement = self::$db->query(
-            "SELECT comments.id, comments, date, user_id, post_id, username
-            FROM comments JOIN users ON comments.user_id = users.id
-            WHERE post_id = " . $id);
+            "SELECT posts.id, title, content, date, user_id, full_name
+            FROM posts JOIN users ON posts.user_id = users.id
+            WHERE user_id = " . $id);
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 

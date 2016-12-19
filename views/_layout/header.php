@@ -43,7 +43,11 @@
                     <li><a href="<?=APP_ROOT?>/posts"><font color="#9370db">  Weed</font></a></li>
                 </ul>
             </li>
-            <li><a href="<?=APP_ROOT?>/posts"><font color="orange">  Posts</font></a></li>
+                <?php if (! $this->isAdmin) : ?>
+                    <li><a href="<?=APP_ROOT?>/posts"><font color="orange">  My Posts</font></a></li>
+                <?php else: ?>
+                    <li><a href="<?=APP_ROOT?>/posts"><font color="orange">  All Posts</font></a></li>
+                <?php endif; ?>
             <li><a href="<?=APP_ROOT?>/posts/create"><font color="orange">  Create Post</font></a></li>
             <li><a href="<?=APP_ROOT?>/users"><font color="orange"> Users</font></a></li>
             <?php endif; ?>
