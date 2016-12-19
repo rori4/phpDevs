@@ -158,6 +158,12 @@ aside{
     padding: 10px;
     min-height: 80vh;
 }
+.users-del{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    min-height: 80vh;
+}
 
 .sidebar {
     background: #222;
