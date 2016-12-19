@@ -64,8 +64,8 @@
         </ul>
     </div>
 </nav>
-
+    <?php require_once('show-notify-messages.php'); ?>
 </header>
 
-<?php require_once('show-notify-messages.php'); ?>
+
 
