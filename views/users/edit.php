@@ -15,7 +15,8 @@
                  </select><br><br>
         <input type="text" name="user_id" value="<?=htmlspecialchars($this->user['id'])?>" hidden />
         <div>
-            <button type="submit" value="Edit" class="btn btn-primary">Edit: </button>
+            <button type="submit" value="Edit" class="btn btn-primary">Edit </button>
+            <button type="submit" value="Back" class="btn btn-primary"><a href="<?=APP_ROOT?>/users">Back</a></button>
         </div>
         </div>
     </form>
