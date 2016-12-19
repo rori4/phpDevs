@@ -1,7 +1,7 @@
 <h1><?=htmlspecialchars($this->title)?></h1>
 
 
-    <div class="middle1">
+    <div class="user-index">
         <table class="table table-hover">
             <thead>
             <tr>

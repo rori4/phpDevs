@@ -108,20 +108,55 @@ aside{
 /****************************************/
 /*********** CLASSES ********************/
 /****************************************/
-.middle {
+.home-index {
     background-color: white;
     width: 50%;
     margin: auto;
     padding: 10px;
     min-height: 100vh; !important;
 }
-.middle1 {
-
-    width: 32%;
+.paging{
+    width: 10%;
     margin: auto;
-    padding: 20px;
+    padding: 10px;
     text-align: left;
-    min-height: 100vh; !important;
+}
+.posts-index{
+
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    min-height: 80vh;
+}
+.post-edit{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    min-height: 80vh;
+}
+.post-create{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    min-height: 80vh;
+}
+.post-delete{
+    width: 20%;
+    margin: auto;
+    padding: 10px;
+    min-height: 80vh;
+}
+.user-edit{
+    width: 20%;
+    margin: auto;
+    padding: 10px;
+    min-height: 80vh;
+}
+.user-index{
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    min-height: 80vh;
 }
 
 .sidebar {

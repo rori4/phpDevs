@@ -1,5 +1,5 @@
 <?php $this->title = 'Create New Post'; ?>
-<div class="middle">
+<div class="post-create">
     <h1><?=htmlspecialchars($this->title)?></h1>
     <br>
     <form method="post">

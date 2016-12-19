@@ -1,6 +1,6 @@
 <h1><?=htmlspecialchars($this->title)?></h1>
 
-<div class="middle">
+<div class="posts-index">
     <?php if (!empty($this->posts)) : ?>
         <table class="table table-hover">
             <thead>

@@ -1,5 +1,5 @@
 <?php $this->title = 'Edit Existing Post'; ?>
-<div class="middle">
+<div class="post-edit">
     <h1><?=htmlspecialchars($this->title)?></h1>
 
     <form method="post">

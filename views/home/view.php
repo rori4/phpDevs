@@ -1,6 +1,6 @@
 <?php $this->title = $this->post['title']?>
 <!--TODO: back button-->
-<main class="middle">
+<main class="home-index">
     <h1><?=htmlspecialchars($this->title)?></h1>
     <p>
         <i>Posted on</i>

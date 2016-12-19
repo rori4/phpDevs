@@ -1,6 +1,6 @@
 <?php $this->title = 'Edit User'; ?>
 
-<div class="middle">
+<div class="user-edit">
     <h1><?=htmlspecialchars($this->title)?></h1>
     <form method="post">
         <div  class="form-group">
