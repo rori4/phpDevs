@@ -189,6 +189,12 @@ aside{
     display: inline-block;
     margin-right: 10px;
 }
+.login-index{
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    min-height: 80vh;
+}
 
 /****************************************/
 /************ FOOTER ********************/
