@@ -120,7 +120,8 @@ aside{
     width: 32%;
     margin: auto;
     padding: 20px;
-    text-align: center;
+    text-align: left;
+    min-height: 100vh; !important;
 }
 
 .sidebar {
@@ -170,21 +171,17 @@ footer>a{
 /************ Comments CSS **************/
 /****************************************/
 
-/*Added by rangel for the comments */
+
 textarea
 {
     width:100%;
     resize: vertical;
 }
-.textwrapper
-{
-    border:1px solid #999999;
-    margin:5px 0;
-    padding:3px;
+.textwrapper {
+    border: 1px solid #999999;
+    margin: 5px 0;
+    padding: 3px;
 }
-/*End by rangel for the comments */
-
-/*Added CSS for comments by rangel*/
 .thumbnail {
     padding:0px;
 }
