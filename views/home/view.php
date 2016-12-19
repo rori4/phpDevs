@@ -38,7 +38,7 @@
         <?php endforeach; ?>
 
 
-<!--    TODO: render comments-->
+<!--    TODO: no comments when you are not logged in-->
     <div>
         <form method="post">
             <textarea name="post_comment" class="textwrapper"  rows="3"></textarea>

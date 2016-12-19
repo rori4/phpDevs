@@ -10,7 +10,7 @@
 
              <div class="form-group">
                 <label for="Content">Content of the post:</label>
-                    <textarea id="text_box" name="post_content" class="form-control" rows="10"><?=htmlspecialchars($this->post['content'])?></textarea>
+                    <?=$this->post['content']?>
                     <br>
              </div>
 
