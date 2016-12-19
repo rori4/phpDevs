@@ -29,7 +29,7 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a  class="navbar-brand" href="<?=APP_ROOT?>"><font
+            <a  class="navbar-brand" href="<?=APP_ROOT?>/home"><font
                 size="6"
                 face="VT323"
                 color="orange"><?=htmlspecialchars("<?php")?><font color="#9370db">Devs</font>></font> </a>
@@ -54,10 +54,12 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <?php if ($this->isLoggedIn) : ?>
-            <li><a href="<?=APP_ROOT?>/users/logout"><span class="glyphicon glyphicon-log-out logo-small"></span><font color="orange">  Logout</font></a></li>
+                <li><p class="navbar-text"><font color="white">Hello, <b><?=$_SESSION['username']?></b></p></font></li>
+                <li><a href="#"><span class="glyphicon glyphicon-cog logo-small"></span></a></li>
+                <li><a href="<?=APP_ROOT?>/users/logout"><span class="glyphicon glyphicon-log-out logo-small"></span><font color="orange">  Logout</font></a></li>
             <?php else: ?>
-            <li><a href="<?=APP_ROOT?>/users/login"><span class="glyphicon glyphicon-log-in logo-small"></span><font color="orange">  Login</font></a></li>
-            <li><a href="<?=APP_ROOT?>/users/register"><span class="glyphicon glyphicon-user logo-small"></span><font color="#9370db"> Sign up</font></font> </a></li>
+                <li><a href="<?=APP_ROOT?>/users/login"><span class="glyphicon glyphicon-log-in logo-small"></span><font color="orange">  Login</font></a></li>
+                <li><a href="<?=APP_ROOT?>/users/register"><span class="glyphicon glyphicon-user logo-small"></span><font color="#9370db"> Sign up</font></font> </a></li>
             <?php endif; ?>
         </ul>
     </div>

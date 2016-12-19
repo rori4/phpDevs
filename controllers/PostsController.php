@@ -11,7 +11,7 @@ class PostsController extends BaseController
     {
         $userId = $_SESSION['user_id'];
         $userRole = $_SESSION['user_role'];
-        echo $userRole;
+
         if ($userRole == 'admin')
         {
             $this->posts = $this->model->getAll();
