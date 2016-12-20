@@ -4,12 +4,12 @@
 
          <form method="post">
             <div class="form-group">
-                <label for="Title">Title to be deleted: </label>
+                <h4><span class="label label-info">Title to be deleted </span></h4>
                 <input type="text" class="form-control" name="post_title" disabled value="<?=htmlspecialchars($this->post['title'])?>"/>
             </div>
 
              <div class="form-group">
-                <label for="Content">Content of the post:</label>
+                 <h4><span class="label label-info">Content of the post </span></h4>
                     <?=$this->post['content']?>
                     <br>
              </div>

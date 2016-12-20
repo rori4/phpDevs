@@ -4,10 +4,11 @@
     <br>
     <form method="post">
         <div class="form-group">
-            <label for="Title">Title: </label>
+            <h4><span class="label label-info">Title </span></h4>
         <input type="text" class="form-control" name="post_title" />
         </div>
        <br>
+        <h4><span class="label label-info">Post content </span></h4>
         <textarea id="text_editor" name="post_content" rows="10"></textarea>
         <div><br><br>
             <button type="submit" value="Create" class="btn btn-primary">Create</button>

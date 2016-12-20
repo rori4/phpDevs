@@ -26,7 +26,6 @@
             </select>
             <button style="align-content: center" type="submit" class="btn btn-primary" value="Register">Register</button>
         </div>
-
     </form>
 </div>
 

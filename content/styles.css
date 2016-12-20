@@ -5,6 +5,13 @@ body>header {
     background: #eee;
     padding: 5px;
 }
+aside{
+
+    float:left;
+    max-width:200px;
+    margrin: 0px;
+    padding: 1em;
+}
 
 aside>h2{
     float: left;
@@ -54,6 +61,7 @@ body>main:after {
     clear: both;
 }
 
+
 /****************************************/
 /***************** LISTS*****************/
 /****************************************/
@@ -97,13 +105,13 @@ div>button>a{
     padding: 1em;
     margin: -1em;
 }
-aside{
 
-    float:left;
-    max-width:200px;
-    margrin: 0px;
-    padding: 1em;
+textarea
+{
+    width:100%;
+    resize: vertical;
 }
+
 
 /****************************************/
 /*********** CLASSES ********************/
@@ -204,35 +212,6 @@ aside{
     min-height: 80vh;
     text-align: center;
 }
-
-/****************************************/
-/************ FOOTER ********************/
-/****************************************/
-footer {
-
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-}
-footer>h2 {
-    align-content: center;
-}
-footer>a{
-    float: right;
-}
-
-
-/****************************************/
-/************ Comments CSS **************/
-/****************************************/
-
-
-textarea
-{
-    width:100%;
-    resize: vertical;
-}
 .textwrapper {
     border: 1px solid #999999;
     margin: 5px 0;
@@ -266,8 +245,20 @@ textarea
     border-right-color:#ddd;
     border-width:8px;
 }
+/****************************************/
+/************ FOOTER ********************/
+/****************************************/
+footer {
 
-/****************************************/
-/********* END Comments CSS *************/
-/****************************************/
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+}
+footer>h2 {
+    align-content: center;
+}
+footer>a{
+    float: right;
+}
 
