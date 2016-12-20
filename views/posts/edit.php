@@ -1,7 +1,6 @@
 <?php $this->title = 'Edit Existing Post'; ?>
 <div class="post-edit">
     <h1><?=htmlspecialchars($this->title)?></h1>
-
     <form method="post">
         <div class="form-group">
             <h4><span class="label label-info">Title </span></h4>
