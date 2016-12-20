@@ -91,25 +91,16 @@ abstract class BaseController
         }
         $this->redirectToUrl($url);
     }
-
+    // Function for authorization for people who are ot logged in
     public function authorize() {
         if (! $this->isLoggedIn) {
             $this->addErrorMessage("Please login first.");
             $this->redirect("users", "login");
         }
     }
+    // This is used only for editing users! If you are not admin get out!
     public function isAdmin() {
         if (! $this->isAdmin) {
-            $this->addErrorMessage("Only for admins. GET OUT!");
-            $this->redirect("users", "login");
-        }
-    }
-
-    public function editAuth($id) {
-
-        $userPosts = $this->model->canEdit($_SESSION['user_id']);
-
-        if (($this->isAdmin or in_array($id,$userPosts['id']))) {
             $this->addErrorMessage("Only for admins. GET OUT!");
             $this->redirect("users", "login");
         }
@@ -143,6 +134,7 @@ abstract class BaseController
     {
         return count($this->validationErrors) == 0;
     }
+    //Function that paginates records
     function Paginate($values,$per_page){
         $total_values = count($values);
         if (isset($_GET['page']))
