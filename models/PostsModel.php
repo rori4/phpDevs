@@ -36,7 +36,7 @@ class PostsModel extends HomeModel
         $statement = self::$db->query(
             "SELECT posts.id, title, content, date, user_id, full_name
             FROM posts JOIN users ON posts.user_id = users.id
-            WHERE user_id = " . $id);
+            WHERE user_id = " .$id);
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
@@ -44,6 +44,15 @@ class PostsModel extends HomeModel
     {
         $statement = self::$db->query(
             "SELECT * FROM users ORDER BY username");
+        return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function canEdit(int $id)
+    {
+        $statement = self::$db->query(
+            "SELECT id
+            FROM posts
+            WHERE user_id = " . $id);
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 }

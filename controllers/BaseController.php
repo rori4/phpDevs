@@ -105,6 +105,16 @@ abstract class BaseController
         }
     }
 
+    public function editAuth($id) {
+
+        $userPosts = $this->model->canEdit($_SESSION['user_id']);
+
+        if (($this->isAdmin or in_array($id,$userPosts['id']))) {
+            $this->addErrorMessage("Only for admins. GET OUT!");
+            $this->redirect("users", "login");
+        }
+    }
+
     function  addMessage(string $msg, string $type)
     {
         if (!isset($_SESSION['messages'])) {

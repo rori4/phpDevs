@@ -5,7 +5,7 @@
     <form method="post">
         <div class="form-group">
             <label for="Title">Title: </label>
-            <input type="text" class="form-control" value="<?=htmlspecialchars($this->post['title'])?> "/>
+            <input type="text" name="post_title" class="form-control" value="<?=htmlspecialchars($this->post['title'])?> "/>
         </div>
 
         <label for="Content">Post content: </label>

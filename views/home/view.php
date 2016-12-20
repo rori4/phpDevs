@@ -11,6 +11,7 @@
     <p><?=$this->post['content']?></p>
 <!---->
 
+
         <?php foreach ($this->comment as $com): ?>
             <div>
 <!--                FOR USER PROFILE PICS-->
@@ -37,21 +38,21 @@
             </div>
         <?php endforeach; ?>
 
-
-<!--    TODO: no comments when you are not logged in-->
-    <div>
-        <form method="post">
-            <textarea name="post_comment" class="textwrapper"  rows="3"></textarea>
-            <input name="post_id" type="text" value="<?=$this->post['id']?>" hidden />
-            <div align="right">
-                <p>
-                    <i>Comment as</i>
-                    <b><?=htmlspecialchars($_SESSION['username'])?></b>
-                </p>
-                <button type="submit" class="btn btn-primary">Comment</button>
-            </div>
-        </form>
-    </div>
+    <?php if ($this->isLoggedIn) : ?>
+        <div>
+            <form method="post">
+                <textarea name="post_comment" class="textwrapper"  rows="3"></textarea>
+                <input name="post_id" type="text" value="<?=$this->post['id']?>" hidden />
+                <div align="right">
+                    <p>
+                        <i>Comment as</i>
+                        <b><?=htmlspecialchars($_SESSION['username'])?></b>
+                    </p>
+                    <button type="submit" class="btn btn-primary">Comment</button>
+                </div>
+            </form>
+        </div>
+    <?php endif; ?>
 
 </main>
 

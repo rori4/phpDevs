@@ -84,6 +84,7 @@ class UsersController extends BaseController
     }
 
     function delete(int $id){
+        $this->isAdmin();
         if ($this->isPost){
             //HTTP POST
             //Delete the requested post by id and show info

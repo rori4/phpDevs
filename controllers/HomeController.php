@@ -9,8 +9,6 @@ class HomeController extends BaseController
 
         $allPosts = $this->model->getAll();
 
-//        echo print_r($this->Paginate($allPosts,5));
-//        echo print_r($this->fetchPaginationResults());
         $this->pageNumbers = $this->Paginate($allPosts,5); // 5 posts per page
         $this->resultPosts = $this->fetchPaginationResults();
 
@@ -32,7 +30,8 @@ class HomeController extends BaseController
 	
 	function view($id)
     {
-        $post = $this->model->getPostById($id);
+        $user_id = $_SESSION['user_id'];
+        $post = $this->model->getPostById($id, $user_id);
         if (!$post)
         {
             $this->addErrorMessage("Error: invalid post id");
@@ -45,7 +44,7 @@ class HomeController extends BaseController
             $comment = $_POST['post_comment'];
 
             if (strlen($comment) < 1) {
-                $this->addErrorMessage("Comment cannot be empty!");
+                $this->setValidationError("post_comment","Comment cannot be empty!");
             }
 
             if ($this->formValid()) {
