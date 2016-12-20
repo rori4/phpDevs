@@ -30,8 +30,7 @@ class HomeController extends BaseController
 	
 	function view($id)
     {
-        $user_id = $_SESSION['user_id'];
-        $post = $this->model->getPostById($id, $user_id);
+        $post = $this->model->getPostById($id);
         if (!$post)
         {
             $this->addErrorMessage("Error: invalid post id");

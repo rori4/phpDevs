@@ -21,10 +21,10 @@ abstract class BaseController
             $this->isPost = true;
         }
 
-        $this->isLoggedIn = isset($_SESSION['username']);
+        $this->isLoggedIn = isset($_SESSION['username']); //if set makes isLogged true
 
         if (isset($_SESSION['user_role'])){
-            $this->isAdmin = ($_SESSION['user_role']=="admin");
+            $this->isAdmin = ($_SESSION['user_role']=="admin"); //if logged in as admin makes isAdmin true
         }
 
 
