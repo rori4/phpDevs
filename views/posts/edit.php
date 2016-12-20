@@ -11,19 +11,8 @@
         <label for="Content">Post content: </label>
         <textarea id="text_editor" name="post_content" rows="10"><?=htmlspecialchars($this->post['content'])?></textarea><br>
         <label for="Date">Date: </label>
-        <!--        ToDO - add calendar-->
-
-        <form>
-            <div class="form-group">
-                <div class="input-group date" id='datepicker'>
-                    <input type="text" class="form-control" placeholder="Enter date of the post">
-                    <span class="input-group-addon">
-                     <i class="glyphicon glyphicon-calendar"></i>
-                   </span>
-                </div>
-            </div>
-        </form>
-
+               <div>Date (yyyy-MM-dd hh:mm:ss):</div>
+               <input type="text" name="post_date" value="<?=htmlspecialchars($this->post['date'])?>" />
         <?php if ($_SESSION['user_role']=="admin"): ?>
             <br> <label for="Author">Author: </label><br>
             <select name="post_author">
@@ -35,7 +24,7 @@
             <input name="post_author" value="<?=$_SESSION['user_id']?>" hidden />
         <?php endif; ?>
         <div><br>
-            <button type="submit" value="Edit" class="btn btn-primary">Edit: </button>
+            <button type="submit" value="Edit" class="btn btn-primary">Edit </button>
         </div>
     </form>
 </div>

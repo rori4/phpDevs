@@ -16,7 +16,7 @@
 
              <div>
                 <button type="submit" value="Delete" class="btn btn-primary">Delete </button>
-                <button type="submit" value="Cancle" class="btn btn-primary"><a href="<?=htmlspecialchars(APP_ROOT)?>/posts">Cancel</a> </button>
+                <button type="submit" value="Cancel" class="btn btn-primary"><a href="<?=htmlspecialchars(APP_ROOT)?>/posts">Cancel</a> </button>
             </div>
          </form>
 </div>
