@@ -1,4 +1,4 @@
-<?php $this->title = 'All posts - Page'; ?>
+<?php $this->title = 'Welcome to phpDevs'; ?>
 
 <div id="wrapper">
     <aside class="sidebar" <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="0">
