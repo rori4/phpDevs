@@ -129,11 +129,16 @@ abstract class BaseController
     {
         $this->validationErrors[$fieldName] = $errorMsg;
     }
+    function msgErrors(string $fieldName, string $errorMsg)
+    {
+        $this->msgErrors[$fieldName] = $errorMsg;
+    }
 
     function formValid() : bool
     {
         return count($this->validationErrors) == 0;
     }
+
     //Function that paginates records
     function Paginate($values,$per_page){
         $total_values = count($values);

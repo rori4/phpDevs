@@ -2,12 +2,12 @@
 
 class UsersModel extends HomeModel
 {
-    public function register(string $username, string $password, string $full_name, string $user_role)
+    public function register(string $username, string $email, string $password, string $full_name, string $user_role)
     {
      $password_hash= password_hash($password,PASSWORD_DEFAULT);
      $statement = self::$db->prepare(
-         "INSERT INTO users(username, password_hash, full_name, user_role) VALUES(?,?,?,?)");
-     $statement->bind_param("ssss", $username, $password_hash, $full_name,$user_role);
+         "INSERT INTO users(username, email, password_hash, full_name, user_role) VALUES(?,?,?,?,?)");
+     $statement->bind_param("sssss", $username, $email, $password_hash, $full_name,$user_role);
      $statement->execute();
      if ($statement->affected_rows != 1)
          return false;
@@ -45,6 +45,13 @@ class UsersModel extends HomeModel
         return $statement->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function checkEmail($email)
+    {
+        $statement = self::$db->query(
+            "SELECT * FROM users WHERE email ='".$email."'" );
+        return $statement->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function delete(int $id) : bool
     {
         $statement = self::$db->prepare(
@@ -60,6 +67,16 @@ class UsersModel extends HomeModel
             "UPDATE users SET username = ?, 
             full_name = ?, user_role = ? WHERE id = ?");
         $statement->bind_param("sssi", $username, $full_name, $user_role, $id);
+        $statement->execute();
+        return $statement->affected_rows >= 0;
+    }
+
+    public function forgottenPassChange(string $new_password, string $email) : bool
+    {
+        $statement = self::$db->prepare(
+            "UPDATE users SET password_hash = ?
+            WHERE email = ?");
+        $statement->bind_param("ss", $new_password, $email);
         $statement->execute();
         return $statement->affected_rows >= 0;
     }

@@ -7,6 +7,10 @@
             <input type="text" name="username" class="form-control" placeholder="Enter UserName">
         </div>
         <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope logo-small"></i></span>
+            <input type="text" name="email" class="form-control" placeholder="Enter Valid Email">
+        </div>
+        <div class="input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-user logo-small"></i></span>
             <input type="text" name="full_name" class="form-control" placeholder="Enter FullName">
         </div><br>
