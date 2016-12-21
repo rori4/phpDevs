@@ -56,7 +56,7 @@
         <ul class="nav navbar-nav navbar-right">
             <?php if ($this->isLoggedIn) : ?>
                 <li><p class="navbar-text"><font color="white">Hello, <b><?=$_SESSION['username']?></b></p></font></li>
-                <li><a href="#"><span class="glyphicon glyphicon-cog logo-small"></span></a></li>
+                <li><a href="<?=APP_ROOT?>/users/edit/<?=$_SESSION['user_id']?>"><span class="glyphicon glyphicon-cog logo-small"></span></a></li>
                 <li><a href="<?=APP_ROOT?>/users/logout"><span class="glyphicon glyphicon-log-out logo-small"></span><font color="orange">  Logout</font></a></li>
             <?php else: ?>
                 <li><a href="<?=APP_ROOT?>/users/login"><span class="glyphicon glyphicon-log-in logo-small"></span><font color="orange">  Login</font></a></li>
