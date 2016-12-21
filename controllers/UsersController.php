@@ -27,9 +27,9 @@ class UsersController extends BaseController
                 $errors = true;
             }
 
-            if (strlen($password) <=1)
+            if (strlen($password) < 3)
             {
-                $this->addErrorMessage("Password is invalid!");
+                $this->addErrorMessage("Password must be at least 3 symbols!");
                 $errors = true;
             }
 
@@ -119,7 +119,11 @@ class UsersController extends BaseController
     }
 
     function edit(int $id){
-        $this->isAdmin();
+
+        if (!(($id==$_SESSION['user_id']) or $this->isAdmin)){
+            $this->addErrorMessage("Error: Only for admins! GET OUT!");
+            $this->redirect('');
+        }
         if ($this->isPost){
             //HTTP POST
             //Edit the requested user by id and show info
@@ -131,10 +135,18 @@ class UsersController extends BaseController
             if (strlen($full_name) < 1){
                 $this->setValidationError("full_name","Username cannot be empty!");
             }
+            $password = $_POST['password'];
+            if (strlen($password) < 3){
+                $this->setValidationError("password","Password must be at least 3 symbols!");
+            }
+            $new_password = password_hash($password,PASSWORD_DEFAULT);
+
+            //TODO
             $user_role = $_POST['user_role'];
             $user_id = $_POST['user_id'];
+            $email = $_POST['email'];
             if ($this->formValid()){
-                if ($this->model->edit($username,$full_name,$user_role, $user_id)){
+                if ($this->model->edit($username,$email,$full_name, $new_password,$user_role, $user_id)){
                     $this->addInfoMessage("User edited.");
                 } else {
                     $this->addErrorMessage("Error: cannot edit user.");
@@ -190,5 +202,4 @@ class UsersController extends BaseController
 
         }
     }
-
 }

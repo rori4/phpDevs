@@ -61,12 +61,12 @@ class UsersModel extends HomeModel
         return $statement->affected_rows == 1;
     }
 
-    public function edit(string $username, string $full_name, string $user_role, int $id ) : bool
+    public function edit(string $username, string $email, string $full_name, string $password, string $user_role, int $id ) : bool
     {
         $statement = self::$db->prepare(
-            "UPDATE users SET username = ?, 
-            full_name = ?, user_role = ? WHERE id = ?");
-        $statement->bind_param("sssi", $username, $full_name, $user_role, $id);
+            "UPDATE users SET username = ?, email = ?,
+            full_name = ?, password_hash = ?, user_role = ? WHERE id = ?");
+        $statement->bind_param("sssssi", $username, $email, $full_name, $password, $user_role, $id);
         $statement->execute();
         return $statement->affected_rows >= 0;
     }

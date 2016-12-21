@@ -6,8 +6,12 @@
         <div  class="form-group">
             <h4><span class="label label-info">Username </span></h4>
                  <input type="text"  class="form" name="username" value="<?=htmlspecialchars($this->user['username'])?>" /><br>
+            <h4><span class="label label-info">Email </span></h4>
+                <input type="text"  class="form" name="email" value="<?=htmlspecialchars($this->user['email'])?>" /><br>
             <h4><span class="label label-info">Full Name </span></h4>
                  <input type="text" class="form" name="full_name" value="<?=htmlspecialchars($this->user['full_name'])?>" /><br>
+            <h4><span class="label label-info">Change Password </span></h4>
+                <input type="password" class="form" name="password" /><br>
             <h4><span class="label label-info">Role </span></h4>
                  <select name="user_role">
                       <option value="admin">Admin</option>
